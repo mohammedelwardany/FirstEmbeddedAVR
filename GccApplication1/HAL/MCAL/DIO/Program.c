@@ -86,9 +86,14 @@ void DIO_WritePinVal(Pin_Type Pin_ID ,u8 VALUE )
 	
 	Pin_Type Port_Index = Pin_ID / 8;
 	Pin_Type Pin_Index  = Pin_ID % 8;
-	
-	SetBit(*DIO_RegPORT[Port_Index],Pin_Index);
-	
+	if (VALUE==HIGH)
+	{
+			SetBit(*DIO_RegPORT[Port_Index],Pin_Index);
+	}
+		else if (VALUE==LOW)
+		{
+			ClrBit(*DIO_RegPORT[Port_Index],Pin_Index);
+		}
 	
 }
 
