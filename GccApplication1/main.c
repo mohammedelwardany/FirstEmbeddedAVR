@@ -6,7 +6,7 @@
  */ 
 
 #include "Dio_Int.h"
-
+#include "util/delay.h"
 int main(void)
 {
 	DIO_Init();
@@ -14,7 +14,9 @@ int main(void)
     while (1) 
     {
 		DIO_WritePinVal(Pin_A1,HIGH);
-		//DIO_WritePinVal(Pin_D4,LOW);
+		_delay_ms(2000);
+		DIO_WritePinVal(Pin_A1,LOW);
+		_delay_ms(2000);
     }
 }
 
