@@ -58,7 +58,7 @@ void Dio_SetPinMode(Pin_Type Pin_ID , PinMode_type Mode){
 
 void DIO_Init(void)
 {
-	for(u8 PinCount=Pin_A0;PinCount<=Pin_D7;PinCount){
+	for(u8 PinCount=Pin_A0;PinCount<=Pin_D7;PinCount++){
 		
 		Dio_SetPinMode(PinCount,Dio_PinInitArray[PinCount]);
 		
