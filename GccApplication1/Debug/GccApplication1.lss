@@ -5,27 +5,27 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         000001e6  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000038  00800060  000001e6  0000025a  2**0
+  1 .data         00000030  00800060  000001e6  0000025a  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  00000292  2**0
+  2 .comment      00000030  00000000  00000000  0000028a  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002c4  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002bc  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000058  00000000  00000000  00000300  2**0
+  4 .debug_aranges 00000058  00000000  00000000  000002f8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   0000099f  00000000  00000000  00000358  2**0
+  5 .debug_info   0000099f  00000000  00000000  00000350  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000660  00000000  00000000  00000cf7  2**0
+  6 .debug_abbrev 00000660  00000000  00000000  00000cef  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000028d  00000000  00000000  00001357  2**0
+  7 .debug_line   0000028d  00000000  00000000  0000134f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000078  00000000  00000000  000015e4  2**2
+  8 .debug_frame  00000078  00000000  00000000  000015dc  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000004a5  00000000  00000000  0000165c  2**0
+  9 .debug_str    000004a5  00000000  00000000  00001654  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000264  00000000  00000000  00001b01  2**0
+ 10 .debug_loc    00000264  00000000  00000000  00001af9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000038  00000000  00000000  00001d65  2**0
+ 11 .debug_ranges 00000038  00000000  00000000  00001d5d  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -70,7 +70,7 @@ Disassembly of section .text:
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
-  70:	a8 39       	cpi	r26, 0x98	; 152
+  70:	a0 39       	cpi	r26, 0x90	; 144
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
   76:	0e 94 e6 00 	call	0x1cc	; 0x1cc <main>
@@ -105,7 +105,7 @@ Disassembly of section .text:
   a2:	22 0f       	add	r18, r18
   a4:	33 1f       	adc	r19, r19
   a6:	f9 01       	movw	r30, r18
-  a8:	e8 57       	subi	r30, 0x78	; 120
+  a8:	e0 58       	subi	r30, 0x80	; 128
   aa:	ff 4f       	sbci	r31, 0xFF	; 255
   ac:	01 90       	ld	r0, Z+
   ae:	f0 81       	ld	r31, Z
@@ -123,7 +123,7 @@ Disassembly of section .text:
   c6:	98 2b       	or	r25, r24
   c8:	90 83       	st	Z, r25
   ca:	f9 01       	movw	r30, r18
-  cc:	e0 57       	subi	r30, 0x70	; 112
+  cc:	e8 57       	subi	r30, 0x78	; 120
   ce:	ff 4f       	sbci	r31, 0xFF	; 255
   d0:	01 90       	ld	r0, Z+
   d2:	f0 81       	ld	r31, Z
@@ -136,7 +136,7 @@ Disassembly of section .text:
   e0:	22 0f       	add	r18, r18
   e2:	33 1f       	adc	r19, r19
   e4:	f9 01       	movw	r30, r18
-  e6:	e8 57       	subi	r30, 0x78	; 120
+  e6:	e0 58       	subi	r30, 0x80	; 128
   e8:	ff 4f       	sbci	r31, 0xFF	; 255
   ea:	01 90       	ld	r0, Z+
   ec:	f0 81       	ld	r31, Z
@@ -154,7 +154,7 @@ Disassembly of section .text:
  104:	98 2b       	or	r25, r24
  106:	90 83       	st	Z, r25
  108:	f9 01       	movw	r30, r18
- 10a:	e0 57       	subi	r30, 0x70	; 112
+ 10a:	e8 57       	subi	r30, 0x78	; 120
  10c:	ff 4f       	sbci	r31, 0xFF	; 255
  10e:	01 90       	ld	r0, Z+
  110:	f0 81       	ld	r31, Z
@@ -168,7 +168,7 @@ Disassembly of section .text:
  120:	f0 e0       	ldi	r31, 0x00	; 0
  122:	ee 0f       	add	r30, r30
  124:	ff 1f       	adc	r31, r31
- 126:	e8 57       	subi	r30, 0x78	; 120
+ 126:	e0 58       	subi	r30, 0x80	; 128
  128:	ff 4f       	sbci	r31, 0xFF	; 255
  12a:	01 90       	ld	r0, Z+
  12c:	f0 81       	ld	r31, Z
@@ -191,7 +191,7 @@ Disassembly of section .text:
  14e:	22 0f       	add	r18, r18
  150:	33 1f       	adc	r19, r19
  152:	f9 01       	movw	r30, r18
- 154:	e8 57       	subi	r30, 0x78	; 120
+ 154:	e0 58       	subi	r30, 0x80	; 128
  156:	ff 4f       	sbci	r31, 0xFF	; 255
  158:	01 90       	ld	r0, Z+
  15a:	f0 81       	ld	r31, Z
@@ -210,7 +210,7 @@ Disassembly of section .text:
  174:	98 23       	and	r25, r24
  176:	90 83       	st	Z, r25
  178:	f9 01       	movw	r30, r18
- 17a:	e0 57       	subi	r30, 0x70	; 112
+ 17a:	e8 57       	subi	r30, 0x78	; 120
  17c:	ff 4f       	sbci	r31, 0xFF	; 255
  17e:	01 90       	ld	r0, Z+
  180:	f0 81       	ld	r31, Z
@@ -234,7 +234,7 @@ Disassembly of section .text:
 	Pin_Type Port_Index = Pin_ID / 8;
 	Pin_Type Pin_Index  = Pin_ID % 8;
 	
-	SetBit(*DIO_RegPIN[Port_Index],Pin_Index);
+	SetBit(*DIO_RegPORT[Port_Index],Pin_Index);
  19a:	e8 2f       	mov	r30, r24
  19c:	e6 95       	lsr	r30
  19e:	e6 95       	lsr	r30
@@ -242,7 +242,7 @@ Disassembly of section .text:
  1a2:	f0 e0       	ldi	r31, 0x00	; 0
  1a4:	ee 0f       	add	r30, r30
  1a6:	ff 1f       	adc	r31, r31
- 1a8:	e0 58       	subi	r30, 0x80	; 128
+ 1a8:	e8 57       	subi	r30, 0x78	; 120
  1aa:	ff 4f       	sbci	r31, 0xFF	; 255
  1ac:	01 90       	ld	r0, Z+
  1ae:	f0 81       	ld	r31, Z

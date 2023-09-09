@@ -20,6 +20,8 @@ Discarded input sections
  .bss           0x00000000        0x0 HAL/MCAL/DIO/Program.o
  .text.DIO_ReadPinVal
                 0x00000000       0x46 HAL/MCAL/DIO/Program.o
+ .rodata.DIO_RegPIN
+                0x00000000        0x8 HAL/MCAL/DIO/Program.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -301,7 +303,7 @@ END GROUP
  *(.fini0)
                 0x000001e6                _etext = .
 
-.data           0x00800060       0x38 load address 0x000001e6
+.data           0x00800060       0x30 load address 0x000001e6
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -311,34 +313,31 @@ END GROUP
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
- .rodata.DIO_RegPIN
-                0x00800080        0x8 HAL/MCAL/DIO/Program.o
-                0x00800080                DIO_RegPIN
  .rodata.DIO_RegDDR
-                0x00800088        0x8 HAL/MCAL/DIO/Program.o
-                0x00800088                DIO_RegDDR
+                0x00800080        0x8 HAL/MCAL/DIO/Program.o
+                0x00800080                DIO_RegDDR
  .rodata.DIO_RegPORT
-                0x00800090        0x8 HAL/MCAL/DIO/Program.o
-                0x00800090                DIO_RegPORT
+                0x00800088        0x8 HAL/MCAL/DIO/Program.o
+                0x00800088                DIO_RegPORT
  *(.gnu.linkonce.r*)
-                0x00800098                . = ALIGN (0x2)
-                0x00800098                _edata = .
-                0x00800098                PROVIDE (__data_end, .)
+                0x00800090                . = ALIGN (0x2)
+                0x00800090                _edata = .
+                0x00800090                PROVIDE (__data_end, .)
 
-.bss            0x00800098        0x0
+.bss            0x00800090        0x0
                 [!provide]                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
                 0x000001e6                __data_load_start = LOADADDR (.data)
-                0x0000021e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000216                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800098        0x0
+.noinit         0x00800090        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800098                _end = .
+                0x00800090                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
