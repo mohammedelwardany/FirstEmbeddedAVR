@@ -281,14 +281,14 @@ int main(void)
 {
 	DIO_Init();
  1e4:	0e 94 c6 00 	call	0x18c	; 0x18c <DIO_Init>
-	Dio_SetPinMode(Pin_A1,OutPut_Low);
- 1e8:	61 e0       	ldi	r22, 0x01	; 1
+	Dio_SetPinMode(Pin_A1,OutPut_High);
+ 1e8:	60 e0       	ldi	r22, 0x00	; 0
  1ea:	81 e0       	ldi	r24, 0x01	; 1
  1ec:	0e 94 41 00 	call	0x82	; 0x82 <Dio_SetPinMode>
     while (1) 
     {
-		DIO_WritePinVal(Pin_A1,HIGH);
- 1f0:	61 e0       	ldi	r22, 0x01	; 1
+		DIO_WritePinVal(Pin_A1,LOW);
+ 1f0:	60 e0       	ldi	r22, 0x00	; 0
  1f2:	81 e0       	ldi	r24, 0x01	; 1
  1f4:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <DIO_WritePinVal>
 	#else
@@ -304,8 +304,8 @@ int main(void)
  200:	00 c0       	rjmp	.+0      	; 0x202 <main+0x1e>
  202:	00 00       	nop
 		_delay_ms(50);
-		DIO_WritePinVal(Pin_A1,LOW);
- 204:	60 e0       	ldi	r22, 0x00	; 0
+		DIO_WritePinVal(Pin_A1,HIGH);
+ 204:	61 e0       	ldi	r22, 0x01	; 1
  206:	81 e0       	ldi	r24, 0x01	; 1
  208:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <DIO_WritePinVal>
  20c:	83 ed       	ldi	r24, 0xD3	; 211
