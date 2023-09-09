@@ -425,11 +425,11 @@ END GROUP
  .debug_abbrev  0x000004a3      0x119 HAL/MCAL/DIO/Program.o
  .debug_abbrev  0x000005bc       0xa4 main.o
 
-.debug_line     0x00000000      0x28d
+.debug_line     0x00000000      0x280
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x115 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .debug_line    0x00000115       0xff HAL/MCAL/DIO/Program.o
- .debug_line    0x00000214       0x79 main.o
+ .debug_line    0x00000214       0x6c main.o
 
 .debug_frame    0x00000000       0x78
  *(.debug_frame)
