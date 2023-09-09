@@ -10,6 +10,7 @@
 int main(void)
 {
 	DIO_Init();
+	Dio_SetPinMode(Pin_A1,OutPut_High)
     while (1) 
     {
 		DIO_WritePinVal(Pin_D4,HIGH);
