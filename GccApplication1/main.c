@@ -14,9 +14,9 @@ int main(void)
     while (1) 
     {
 		DIO_WritePinVal(Pin_A1,HIGH);
-		_delay_ms(2000);
+		_delay_ms(50);
 		DIO_WritePinVal(Pin_A1,LOW);
-		_delay_ms(2000);
+		_delay_ms(50);
     }
 }
 
