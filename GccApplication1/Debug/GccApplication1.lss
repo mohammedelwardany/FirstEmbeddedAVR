@@ -275,9 +275,9 @@ int main(void)
  1d4:	0e 94 41 00 	call	0x82	; 0x82 <Dio_SetPinMode>
     while (1) 
     {
-		DIO_WritePinVal(Pin_D4,HIGH);
+		DIO_WritePinVal(Pin_A1,HIGH);
  1d8:	61 e0       	ldi	r22, 0x01	; 1
- 1da:	8c e1       	ldi	r24, 0x1C	; 28
+ 1da:	81 e0       	ldi	r24, 0x01	; 1
  1dc:	0e 94 cd 00 	call	0x19a	; 0x19a <DIO_WritePinVal>
  1e0:	fb cf       	rjmp	.-10     	; 0x1d8 <main+0xc>
 

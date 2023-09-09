@@ -13,7 +13,7 @@ int main(void)
 	Dio_SetPinMode(Pin_A1,OutPut_High);
     while (1) 
     {
-		DIO_WritePinVal(Pin_D4,HIGH);
+		DIO_WritePinVal(Pin_A1,HIGH);
 		//DIO_WritePinVal(Pin_D4,LOW);
     }
 }
