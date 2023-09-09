@@ -13,13 +13,14 @@ int main(void)
 	Dio_SetPinMode(Pin_A1,OutPut_High);
 	_delay_ms(500);
 	DIO_WritePinVal(Pin_A1,LOW);
-    /*while (1) 
+	_delay_ms(500);
+    while (1) 
     {
 		DIO_WritePinVal(Pin_A1,LOW);
 		_delay_ms(50);
 		DIO_WritePinVal(Pin_A1,HIGH);
 		_delay_ms(50);
-    }*/
+    }
 	return 0;
 }
 
