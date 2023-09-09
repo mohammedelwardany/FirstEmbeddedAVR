@@ -3,27 +3,29 @@ GccApplication1.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000088  00000000  00000000  00000054  2**1
+  0 .text         000001de  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000000dc  2**0
+  1 .data         00000038  00800060  000001de  00000252  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000000dc  2**0
+  2 .comment      00000030  00000000  00000000  0000028a  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000010c  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002bc  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000020  00000000  00000000  00000148  2**0
+  4 .debug_aranges 00000058  00000000  00000000  000002f8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000539  00000000  00000000  00000168  2**0
+  5 .debug_info   00000955  00000000  00000000  00000350  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000004ec  00000000  00000000  000006a1  2**0
+  6 .debug_abbrev 00000653  00000000  00000000  00000ca5  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000014e  00000000  00000000  00000b8d  2**0
+  7 .debug_line   00000287  00000000  00000000  000012f8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  00000cdc  2**2
+  8 .debug_frame  00000078  00000000  00000000  00001580  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000002b9  00000000  00000000  00000d00  2**0
+  9 .debug_str    000004a5  00000000  00000000  000015f8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000010  00000000  00000000  00000fb9  2**0
+ 10 .debug_loc    00000264  00000000  00000000  00001a9d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00001d01  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -63,31 +65,220 @@ Disassembly of section .text:
   60:	10 e0       	ldi	r17, 0x00	; 0
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	e8 e8       	ldi	r30, 0x88	; 136
-  68:	f0 e0       	ldi	r31, 0x00	; 0
+  66:	ee ed       	ldi	r30, 0xDE	; 222
+  68:	f1 e0       	ldi	r31, 0x01	; 1
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
-  70:	a0 36       	cpi	r26, 0x60	; 96
+  70:	a8 39       	cpi	r26, 0x98	; 152
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
-  76:	0e 94 41 00 	call	0x82	; 0x82 <main>
-  7a:	0c 94 42 00 	jmp	0x84	; 0x84 <_exit>
+  76:	0e 94 e6 00 	call	0x1cc	; 0x1cc <main>
+  7a:	0c 94 ed 00 	jmp	0x1da	; 0x1da <_exit>
 
 0000007e <__bad_interrupt>:
   7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000082 <main>:
- */ 
+00000082 <Dio_SetPinMode>:
+{
+	
+	Pin_Type Port_Index = Pin_ID / 8;
+	Pin_Type Pin_Index  = Pin_ID % 8;
+	
+	*ReadBufferPTR = GetBit(*DIO_RegPIN[Port_Index],Pin_Index);
+  82:	28 2f       	mov	r18, r24
+  84:	26 95       	lsr	r18
+  86:	26 95       	lsr	r18
+  88:	26 95       	lsr	r18
+  8a:	87 70       	andi	r24, 0x07	; 7
+  8c:	61 30       	cpi	r22, 0x01	; 1
+  8e:	39 f1       	breq	.+78     	; 0xde <Dio_SetPinMode+0x5c>
+  90:	38 f0       	brcs	.+14     	; 0xa0 <Dio_SetPinMode+0x1e>
+  92:	62 30       	cpi	r22, 0x02	; 2
+  94:	09 f4       	brne	.+2      	; 0x98 <Dio_SetPinMode+0x16>
+  96:	43 c0       	rjmp	.+134    	; 0x11e <Dio_SetPinMode+0x9c>
+  98:	63 30       	cpi	r22, 0x03	; 3
+  9a:	09 f4       	brne	.+2      	; 0x9e <Dio_SetPinMode+0x1c>
+  9c:	57 c0       	rjmp	.+174    	; 0x14c <Dio_SetPinMode+0xca>
+  9e:	08 95       	ret
+  a0:	30 e0       	ldi	r19, 0x00	; 0
+  a2:	22 0f       	add	r18, r18
+  a4:	33 1f       	adc	r19, r19
+  a6:	f9 01       	movw	r30, r18
+  a8:	e8 57       	subi	r30, 0x78	; 120
+  aa:	ff 4f       	sbci	r31, 0xFF	; 255
+  ac:	01 90       	ld	r0, Z+
+  ae:	f0 81       	ld	r31, Z
+  b0:	e0 2d       	mov	r30, r0
+  b2:	41 e0       	ldi	r20, 0x01	; 1
+  b4:	50 e0       	ldi	r21, 0x00	; 0
+  b6:	ba 01       	movw	r22, r20
+  b8:	02 c0       	rjmp	.+4      	; 0xbe <Dio_SetPinMode+0x3c>
+  ba:	66 0f       	add	r22, r22
+  bc:	77 1f       	adc	r23, r23
+  be:	8a 95       	dec	r24
+  c0:	e2 f7       	brpl	.-8      	; 0xba <Dio_SetPinMode+0x38>
+  c2:	cb 01       	movw	r24, r22
+  c4:	90 81       	ld	r25, Z
+  c6:	98 2b       	or	r25, r24
+  c8:	90 83       	st	Z, r25
+  ca:	f9 01       	movw	r30, r18
+  cc:	e0 57       	subi	r30, 0x70	; 112
+  ce:	ff 4f       	sbci	r31, 0xFF	; 255
+  d0:	01 90       	ld	r0, Z+
+  d2:	f0 81       	ld	r31, Z
+  d4:	e0 2d       	mov	r30, r0
+  d6:	90 81       	ld	r25, Z
+  d8:	89 2b       	or	r24, r25
+  da:	80 83       	st	Z, r24
+  dc:	08 95       	ret
+  de:	30 e0       	ldi	r19, 0x00	; 0
+  e0:	22 0f       	add	r18, r18
+  e2:	33 1f       	adc	r19, r19
+  e4:	f9 01       	movw	r30, r18
+  e6:	e8 57       	subi	r30, 0x78	; 120
+  e8:	ff 4f       	sbci	r31, 0xFF	; 255
+  ea:	01 90       	ld	r0, Z+
+  ec:	f0 81       	ld	r31, Z
+  ee:	e0 2d       	mov	r30, r0
+  f0:	41 e0       	ldi	r20, 0x01	; 1
+  f2:	50 e0       	ldi	r21, 0x00	; 0
+  f4:	ba 01       	movw	r22, r20
+  f6:	02 c0       	rjmp	.+4      	; 0xfc <Dio_SetPinMode+0x7a>
+  f8:	66 0f       	add	r22, r22
+  fa:	77 1f       	adc	r23, r23
+  fc:	8a 95       	dec	r24
+  fe:	e2 f7       	brpl	.-8      	; 0xf8 <Dio_SetPinMode+0x76>
+ 100:	cb 01       	movw	r24, r22
+ 102:	90 81       	ld	r25, Z
+ 104:	98 2b       	or	r25, r24
+ 106:	90 83       	st	Z, r25
+ 108:	f9 01       	movw	r30, r18
+ 10a:	e0 57       	subi	r30, 0x70	; 112
+ 10c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 10e:	01 90       	ld	r0, Z+
+ 110:	f0 81       	ld	r31, Z
+ 112:	e0 2d       	mov	r30, r0
+ 114:	80 95       	com	r24
+ 116:	90 81       	ld	r25, Z
+ 118:	89 23       	and	r24, r25
+ 11a:	80 83       	st	Z, r24
+ 11c:	08 95       	ret
+ 11e:	e2 2f       	mov	r30, r18
+ 120:	f0 e0       	ldi	r31, 0x00	; 0
+ 122:	ee 0f       	add	r30, r30
+ 124:	ff 1f       	adc	r31, r31
+ 126:	e8 57       	subi	r30, 0x78	; 120
+ 128:	ff 4f       	sbci	r31, 0xFF	; 255
+ 12a:	01 90       	ld	r0, Z+
+ 12c:	f0 81       	ld	r31, Z
+ 12e:	e0 2d       	mov	r30, r0
+ 130:	21 e0       	ldi	r18, 0x01	; 1
+ 132:	30 e0       	ldi	r19, 0x00	; 0
+ 134:	a9 01       	movw	r20, r18
+ 136:	02 c0       	rjmp	.+4      	; 0x13c <Dio_SetPinMode+0xba>
+ 138:	44 0f       	add	r20, r20
+ 13a:	55 1f       	adc	r21, r21
+ 13c:	8a 95       	dec	r24
+ 13e:	e2 f7       	brpl	.-8      	; 0x138 <Dio_SetPinMode+0xb6>
+ 140:	ca 01       	movw	r24, r20
+ 142:	80 95       	com	r24
+ 144:	90 81       	ld	r25, Z
+ 146:	89 23       	and	r24, r25
+ 148:	80 83       	st	Z, r24
+ 14a:	08 95       	ret
+ 14c:	30 e0       	ldi	r19, 0x00	; 0
+ 14e:	22 0f       	add	r18, r18
+ 150:	33 1f       	adc	r19, r19
+ 152:	f9 01       	movw	r30, r18
+ 154:	e8 57       	subi	r30, 0x78	; 120
+ 156:	ff 4f       	sbci	r31, 0xFF	; 255
+ 158:	01 90       	ld	r0, Z+
+ 15a:	f0 81       	ld	r31, Z
+ 15c:	e0 2d       	mov	r30, r0
+ 15e:	41 e0       	ldi	r20, 0x01	; 1
+ 160:	50 e0       	ldi	r21, 0x00	; 0
+ 162:	ba 01       	movw	r22, r20
+ 164:	02 c0       	rjmp	.+4      	; 0x16a <Dio_SetPinMode+0xe8>
+ 166:	66 0f       	add	r22, r22
+ 168:	77 1f       	adc	r23, r23
+ 16a:	8a 95       	dec	r24
+ 16c:	e2 f7       	brpl	.-8      	; 0x166 <Dio_SetPinMode+0xe4>
+ 16e:	cb 01       	movw	r24, r22
+ 170:	80 95       	com	r24
+ 172:	90 81       	ld	r25, Z
+ 174:	98 23       	and	r25, r24
+ 176:	90 83       	st	Z, r25
+ 178:	f9 01       	movw	r30, r18
+ 17a:	e0 57       	subi	r30, 0x70	; 112
+ 17c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 17e:	01 90       	ld	r0, Z+
+ 180:	f0 81       	ld	r31, Z
+ 182:	e0 2d       	mov	r30, r0
+ 184:	90 81       	ld	r25, Z
+ 186:	89 23       	and	r24, r25
+ 188:	80 83       	st	Z, r24
+ 18a:	08 95       	ret
+
+0000018c <DIO_Init>:
+ 18c:	c0 e6       	ldi	r28, 0x60	; 96
+ 18e:	d0 e0       	ldi	r29, 0x00	; 0
+ 190:	68 81       	ld	r22, Y
+ 192:	80 e0       	ldi	r24, 0x00	; 0
+ 194:	0e 94 41 00 	call	0x82	; 0x82 <Dio_SetPinMode>
+ 198:	fb cf       	rjmp	.-10     	; 0x190 <DIO_Init+0x4>
+
+0000019a <DIO_WritePinVal>:
+{
+	
+	Pin_Type Port_Index = Pin_ID / 8;
+	Pin_Type Pin_Index  = Pin_ID % 8;
+	
+	SetBit(*DIO_RegPIN[Port_Index],Pin_Index);
+ 19a:	e8 2f       	mov	r30, r24
+ 19c:	e6 95       	lsr	r30
+ 19e:	e6 95       	lsr	r30
+ 1a0:	e6 95       	lsr	r30
+ 1a2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1a4:	ee 0f       	add	r30, r30
+ 1a6:	ff 1f       	adc	r31, r31
+ 1a8:	e0 58       	subi	r30, 0x80	; 128
+ 1aa:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1ac:	01 90       	ld	r0, Z+
+ 1ae:	f0 81       	ld	r31, Z
+ 1b0:	e0 2d       	mov	r30, r0
+ 1b2:	28 2f       	mov	r18, r24
+ 1b4:	27 70       	andi	r18, 0x07	; 7
+ 1b6:	81 e0       	ldi	r24, 0x01	; 1
+ 1b8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ba:	02 c0       	rjmp	.+4      	; 0x1c0 <DIO_WritePinVal+0x26>
+ 1bc:	88 0f       	add	r24, r24
+ 1be:	99 1f       	adc	r25, r25
+ 1c0:	2a 95       	dec	r18
+ 1c2:	e2 f7       	brpl	.-8      	; 0x1bc <DIO_WritePinVal+0x22>
+ 1c4:	90 81       	ld	r25, Z
+ 1c6:	89 2b       	or	r24, r25
+ 1c8:	80 83       	st	Z, r24
+ 1ca:	08 95       	ret
+
+000001cc <main>:
 
 #include "Dio_Int.h"
 
 int main(void)
 {
-  82:	ff cf       	rjmp	.-2      	; 0x82 <main>
+	DIO_Init();
+ 1cc:	0e 94 c6 00 	call	0x18c	; 0x18c <DIO_Init>
+    while (1) 
+    {
+		DIO_WritePinVal(Pin_D4,HIGH);
+ 1d0:	61 e0       	ldi	r22, 0x01	; 1
+ 1d2:	8c e1       	ldi	r24, 0x1C	; 28
+ 1d4:	0e 94 cd 00 	call	0x19a	; 0x19a <DIO_WritePinVal>
+ 1d8:	fb cf       	rjmp	.-10     	; 0x1d0 <main+0x4>
 
-00000084 <_exit>:
-  84:	f8 94       	cli
+000001da <_exit>:
+ 1da:	f8 94       	cli
 
-00000086 <__stop_program>:
-  86:	ff cf       	rjmp	.-2      	; 0x86 <__stop_program>
+000001dc <__stop_program>:
+ 1dc:	ff cf       	rjmp	.-2      	; 0x1dc <__stop_program>
