@@ -281,8 +281,8 @@ int main(void)
 {
 	DIO_Init();
  1e4:	0e 94 c6 00 	call	0x18c	; 0x18c <DIO_Init>
-	Dio_SetPinMode(Pin_A1,OutPut_High);
- 1e8:	60 e0       	ldi	r22, 0x00	; 0
+	Dio_SetPinMode(Pin_A1,OutPut_Low);
+ 1e8:	61 e0       	ldi	r22, 0x01	; 1
  1ea:	81 e0       	ldi	r24, 0x01	; 1
  1ec:	0e 94 41 00 	call	0x82	; 0x82 <Dio_SetPinMode>
     while (1) 
