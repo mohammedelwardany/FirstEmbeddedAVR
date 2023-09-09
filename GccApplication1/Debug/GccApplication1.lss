@@ -3,29 +3,29 @@ GccApplication1.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         000001de  00000000  00000000  00000074  2**1
+  0 .text         000001e6  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000038  00800060  000001de  00000252  2**0
+  1 .data         00000038  00800060  000001e6  0000025a  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  0000028a  2**0
+  2 .comment      00000030  00000000  00000000  00000292  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002bc  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002c4  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000058  00000000  00000000  000002f8  2**0
+  4 .debug_aranges 00000058  00000000  00000000  00000300  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000955  00000000  00000000  00000350  2**0
+  5 .debug_info   0000099f  00000000  00000000  00000358  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000653  00000000  00000000  00000ca5  2**0
+  6 .debug_abbrev 00000660  00000000  00000000  00000cf7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000287  00000000  00000000  000012f8  2**0
+  7 .debug_line   0000028d  00000000  00000000  00001357  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000078  00000000  00000000  00001580  2**2
+  8 .debug_frame  00000078  00000000  00000000  000015e4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000004a5  00000000  00000000  000015f8  2**0
+  9 .debug_str    000004a5  00000000  00000000  0000165c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000264  00000000  00000000  00001a9d  2**0
+ 10 .debug_loc    00000264  00000000  00000000  00001b01  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000038  00000000  00000000  00001d01  2**0
+ 11 .debug_ranges 00000038  00000000  00000000  00001d65  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -65,7 +65,7 @@ Disassembly of section .text:
   60:	10 e0       	ldi	r17, 0x00	; 0
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	ee ed       	ldi	r30, 0xDE	; 222
+  66:	e6 ee       	ldi	r30, 0xE6	; 230
   68:	f1 e0       	ldi	r31, 0x01	; 1
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
@@ -74,7 +74,7 @@ Disassembly of section .text:
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
   76:	0e 94 e6 00 	call	0x1cc	; 0x1cc <main>
-  7a:	0c 94 ed 00 	jmp	0x1da	; 0x1da <_exit>
+  7a:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <_exit>
 
 0000007e <__bad_interrupt>:
   7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -269,16 +269,20 @@ int main(void)
 {
 	DIO_Init();
  1cc:	0e 94 c6 00 	call	0x18c	; 0x18c <DIO_Init>
+	Dio_SetPinMode(Pin_A1,OutPut_High);
+ 1d0:	60 e0       	ldi	r22, 0x00	; 0
+ 1d2:	81 e0       	ldi	r24, 0x01	; 1
+ 1d4:	0e 94 41 00 	call	0x82	; 0x82 <Dio_SetPinMode>
     while (1) 
     {
 		DIO_WritePinVal(Pin_D4,HIGH);
- 1d0:	61 e0       	ldi	r22, 0x01	; 1
- 1d2:	8c e1       	ldi	r24, 0x1C	; 28
- 1d4:	0e 94 cd 00 	call	0x19a	; 0x19a <DIO_WritePinVal>
- 1d8:	fb cf       	rjmp	.-10     	; 0x1d0 <main+0x4>
+ 1d8:	61 e0       	ldi	r22, 0x01	; 1
+ 1da:	8c e1       	ldi	r24, 0x1C	; 28
+ 1dc:	0e 94 cd 00 	call	0x19a	; 0x19a <DIO_WritePinVal>
+ 1e0:	fb cf       	rjmp	.-10     	; 0x1d8 <main+0xc>
 
-000001da <_exit>:
- 1da:	f8 94       	cli
+000001e2 <_exit>:
+ 1e2:	f8 94       	cli
 
-000001dc <__stop_program>:
- 1dc:	ff cf       	rjmp	.-2      	; 0x1dc <__stop_program>
+000001e4 <__stop_program>:
+ 1e4:	ff cf       	rjmp	.-2      	; 0x1e4 <__stop_program>
