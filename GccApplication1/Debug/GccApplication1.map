@@ -185,7 +185,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x280
+.text           0x00000000      0x254
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
                 0x00000000                __vector_default
@@ -274,13 +274,13 @@ END GROUP
  .text.DIO_WritePinVal
                 0x000001b2       0x68 HAL/MCAL/DIO/Program.o
                 0x000001b2                DIO_WritePinVal
- .text.main     0x0000021a       0x62 main.o
+ .text.main     0x0000021a       0x36 main.o
                 0x0000021a                main
-                0x0000027c                . = ALIGN (0x2)
+                0x00000250                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000027c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000027c                _exit
-                0x0000027c                exit
+ .fini9         0x00000250        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000250                _exit
+                0x00000250                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -299,11 +299,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000027c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000250        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000280                _etext = .
+                0x00000254                _etext = .
 
-.data           0x00800060       0x30 load address 0x00000280
+.data           0x00800060       0x30 load address 0x00000254
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -330,8 +330,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x00000280                __data_load_start = LOADADDR (.data)
-                0x000002b0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000254                __data_load_start = LOADADDR (.data)
+                0x00000284                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800090        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -413,23 +413,23 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xb2d
+.debug_info     0x00000000      0xaa1
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .debug_info    0x000004e6      0x316 HAL/MCAL/DIO/Program.o
- .debug_info    0x000007fc      0x331 main.o
+ .debug_info    0x000007fc      0x2a5 main.o
 
-.debug_abbrev   0x00000000      0x6e7
+.debug_abbrev   0x00000000      0x6de
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .debug_abbrev  0x000004a3      0x107 HAL/MCAL/DIO/Program.o
- .debug_abbrev  0x000005aa      0x13d main.o
+ .debug_abbrev  0x000005aa      0x134 main.o
 
-.debug_line     0x00000000      0x3ba
+.debug_line     0x00000000      0x39c
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x115 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .debug_line    0x00000115      0x12c HAL/MCAL/DIO/Program.o
- .debug_line    0x00000241      0x179 main.o
+ .debug_line    0x00000241      0x15b main.o
 
 .debug_frame    0x00000000       0x88
  *(.debug_frame)
@@ -444,10 +444,10 @@ END GROUP
  .debug_str     0x00000494       0x81 main.o
                                 0x2ff (size before relaxing)
 
-.debug_loc      0x00000000      0x366
+.debug_loc      0x00000000      0x31e
  *(.debug_loc)
  .debug_loc     0x00000000      0x2d8 HAL/MCAL/DIO/Program.o
- .debug_loc     0x000002d8       0x8e main.o
+ .debug_loc     0x000002d8       0x46 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
