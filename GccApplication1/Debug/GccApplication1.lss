@@ -3,29 +3,29 @@ GccApplication1.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000254  00000000  00000000  00000074  2**1
+  0 .text         00000260  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000030  00800060  00000254  000002c8  2**0
+  1 .data         00000030  00800060  00000260  000002d4  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000002f8  2**0
+  2 .comment      00000030  00000000  00000000  00000304  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000328  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000334  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000058  00000000  00000000  00000364  2**0
+  4 .debug_aranges 00000058  00000000  00000000  00000370  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000aa1  00000000  00000000  000003bc  2**0
+  5 .debug_info   00000aa3  00000000  00000000  000003c8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000006de  00000000  00000000  00000e5d  2**0
+  6 .debug_abbrev 000006de  00000000  00000000  00000e6b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000039c  00000000  00000000  0000153b  2**0
+  7 .debug_line   0000039c  00000000  00000000  00001549  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000088  00000000  00000000  000018d8  2**2
+  8 .debug_frame  00000088  00000000  00000000  000018e8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000515  00000000  00000000  00001960  2**0
+  9 .debug_str    00000515  00000000  00000000  00001970  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000031e  00000000  00000000  00001e75  2**0
+ 10 .debug_loc    00000320  00000000  00000000  00001e85  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000038  00000000  00000000  00002193  2**0
+ 11 .debug_ranges 00000038  00000000  00000000  000021a5  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -65,7 +65,7 @@ Disassembly of section .text:
   60:	10 e0       	ldi	r17, 0x00	; 0
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	e4 e5       	ldi	r30, 0x54	; 84
+  66:	e0 e6       	ldi	r30, 0x60	; 96
   68:	f2 e0       	ldi	r31, 0x02	; 2
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
@@ -74,7 +74,7 @@ Disassembly of section .text:
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
   76:	0e 94 0d 01 	call	0x21a	; 0x21a <main>
-  7a:	0c 94 28 01 	jmp	0x250	; 0x250 <_exit>
+  7a:	0c 94 2e 01 	jmp	0x25c	; 0x25c <_exit>
 
 0000007e <__bad_interrupt>:
   7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -309,9 +309,9 @@ void DIO_WritePinVal(Pin_Type Pin_ID ,u8 VALUE )
  218:	08 95       	ret
 
 0000021a <main>:
-
 #include "Dio_Int.h"
 #include "AVR/delay.h"
+
 int main(void)
 {
 	DIO_Init();
@@ -325,9 +325,9 @@ int main(void)
 	_delay_ms(500);*/
     while(1)
 	{
-		DIO_WritePinVal(Pin_A1,HIGH);
+		DIO_WritePinVal(Pin_A6,HIGH);
  226:	61 e0       	ldi	r22, 0x01	; 1
- 228:	81 e0       	ldi	r24, 0x01	; 1
+ 228:	86 e0       	ldi	r24, 0x06	; 6
  22a:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <DIO_WritePinVal>
 	#else
 		//round up by default
@@ -335,27 +335,33 @@ int main(void)
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 22e:	83 ed       	ldi	r24, 0xD3	; 211
- 230:	90 e3       	ldi	r25, 0x30	; 48
- 232:	01 97       	sbiw	r24, 0x01	; 1
- 234:	f1 f7       	brne	.-4      	; 0x232 <main+0x18>
- 236:	00 c0       	rjmp	.+0      	; 0x238 <main+0x1e>
- 238:	00 00       	nop
-		_delay_ms(50);
-		DIO_WritePinVal(Pin_A1,LOW);
- 23a:	60 e0       	ldi	r22, 0x00	; 0
- 23c:	81 e0       	ldi	r24, 0x01	; 1
- 23e:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <DIO_WritePinVal>
- 242:	83 ed       	ldi	r24, 0xD3	; 211
- 244:	90 e3       	ldi	r25, 0x30	; 48
- 246:	01 97       	sbiw	r24, 0x01	; 1
- 248:	f1 f7       	brne	.-4      	; 0x246 <main+0x2c>
- 24a:	00 c0       	rjmp	.+0      	; 0x24c <main+0x32>
- 24c:	00 00       	nop
- 24e:	eb cf       	rjmp	.-42     	; 0x226 <main+0xc>
+ 22e:	2f ef       	ldi	r18, 0xFF	; 255
+ 230:	83 e2       	ldi	r24, 0x23	; 35
+ 232:	94 ef       	ldi	r25, 0xF4	; 244
+ 234:	21 50       	subi	r18, 0x01	; 1
+ 236:	80 40       	sbci	r24, 0x00	; 0
+ 238:	90 40       	sbci	r25, 0x00	; 0
+ 23a:	e1 f7       	brne	.-8      	; 0x234 <main+0x1a>
+ 23c:	00 c0       	rjmp	.+0      	; 0x23e <main+0x24>
+ 23e:	00 00       	nop
+		_delay_ms(5000);
+		DIO_WritePinVal(Pin_A6,LOW);
+ 240:	60 e0       	ldi	r22, 0x00	; 0
+ 242:	86 e0       	ldi	r24, 0x06	; 6
+ 244:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <DIO_WritePinVal>
+ 248:	2f ef       	ldi	r18, 0xFF	; 255
+ 24a:	83 e2       	ldi	r24, 0x23	; 35
+ 24c:	94 ef       	ldi	r25, 0xF4	; 244
+ 24e:	21 50       	subi	r18, 0x01	; 1
+ 250:	80 40       	sbci	r24, 0x00	; 0
+ 252:	90 40       	sbci	r25, 0x00	; 0
+ 254:	e1 f7       	brne	.-8      	; 0x24e <main+0x34>
+ 256:	00 c0       	rjmp	.+0      	; 0x258 <main+0x3e>
+ 258:	00 00       	nop
+ 25a:	e5 cf       	rjmp	.-54     	; 0x226 <main+0xc>
 
-00000250 <_exit>:
- 250:	f8 94       	cli
+0000025c <_exit>:
+ 25c:	f8 94       	cli
 
-00000252 <__stop_program>:
- 252:	ff cf       	rjmp	.-2      	; 0x252 <__stop_program>
+0000025e <__stop_program>:
+ 25e:	ff cf       	rjmp	.-2      	; 0x25e <__stop_program>

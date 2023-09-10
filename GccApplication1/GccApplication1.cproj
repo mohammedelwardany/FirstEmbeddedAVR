@@ -130,6 +130,7 @@
       <Value>../HAL/MCAL</Value>
       <Value>../HAL</Value>
       <Value>../HAL/KeyBad</Value>
+      <Value>../HAL/LCD</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -167,6 +168,24 @@
     <Compile Include="HAL\KeyBad\Program_KeyBad.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HAL\LCD\Configure_LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\Interface_LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\Private_LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\Program_LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\MCAL\DIO\DIO_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
@@ -191,6 +210,8 @@
     <Folder Include="HAL\MCAL\DIO\" />
     <Folder Include="HAL" />
     <Folder Include="HAL\KeyBad" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\LED" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
