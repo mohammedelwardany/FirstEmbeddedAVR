@@ -21,7 +21,7 @@
 #define EN Pin_A2
 #define RS Pin_A3
 
-
+#define NUM_BUFFER 20
 
 
 #endif /* CONFIGURE_LCD_H_ */

@@ -4,6 +4,14 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               HAL/MCAL/DIO/Program.o (__do_copy_data)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa.o)
+                              HAL/LCD/Program_LCD.o (itoa)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa.o) (__itoa_ncheck)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o) (__utoa_common)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o) (strrev)
 
 Discarded input sections
 
@@ -18,19 +26,31 @@ Discarded input sections
  .text          0x00000000        0x0 HAL/LCD/Program_LCD.o
  .data          0x00000000        0x0 HAL/LCD/Program_LCD.o
  .bss           0x00000000        0x0 HAL/LCD/Program_LCD.o
- .text.init     0x00000000       0x26 HAL/LCD/Program_LCD.o
+ .text.Private_LCDHalfPort
+                0x00000000       0x24 HAL/LCD/Program_LCD.o
  .text.LCD_SendCmdDataCommend
-                0x00000000       0x18 HAL/LCD/Program_LCD.o
- .debug_info    0x00000000      0x298 HAL/LCD/Program_LCD.o
- .debug_abbrev  0x00000000       0xe2 HAL/LCD/Program_LCD.o
- .debug_loc     0x00000000       0xef HAL/LCD/Program_LCD.o
+                0x00000000       0xca HAL/LCD/Program_LCD.o
+ .text.init     0x00000000       0x78 HAL/LCD/Program_LCD.o
+ .text.LCD_voidWriteString
+                0x00000000       0x22 HAL/LCD/Program_LCD.o
+ .text.LCD_voidWriteNumber
+                0x00000000       0x34 HAL/LCD/Program_LCD.o
+ .text.LCD_voidClear
+                0x00000000       0x14 HAL/LCD/Program_LCD.o
+ .text.LCD_voidShift
+                0x00000000       0x56 HAL/LCD/Program_LCD.o
+ .text.LCD_voidGoToSpecificPosition
+                0x00000000        0x2 HAL/LCD/Program_LCD.o
+ .debug_info    0x00000000      0x8fa HAL/LCD/Program_LCD.o
+ .debug_abbrev  0x00000000      0x14b HAL/LCD/Program_LCD.o
+ .debug_loc     0x00000000      0x334 HAL/LCD/Program_LCD.o
  .debug_aranges
-                0x00000000       0x28 HAL/LCD/Program_LCD.o
- .debug_ranges  0x00000000       0x18 HAL/LCD/Program_LCD.o
- .debug_line    0x00000000       0xc5 HAL/LCD/Program_LCD.o
- .debug_str     0x00000000      0x2b0 HAL/LCD/Program_LCD.o
+                0x00000000       0x58 HAL/LCD/Program_LCD.o
+ .debug_ranges  0x00000000       0x48 HAL/LCD/Program_LCD.o
+ .debug_line    0x00000000      0x273 HAL/LCD/Program_LCD.o
+ .debug_str     0x00000000      0x427 HAL/LCD/Program_LCD.o
  .comment       0x00000000       0x31 HAL/LCD/Program_LCD.o
- .debug_frame   0x00000000       0x3c HAL/LCD/Program_LCD.o
+ .debug_frame   0x00000000       0xbc HAL/LCD/Program_LCD.o
  .text          0x00000000        0x0 HAL/MCAL/DIO/Program.o
  .data          0x00000000        0x0 HAL/MCAL/DIO/Program.o
  .bss           0x00000000        0x0 HAL/MCAL/DIO/Program.o
@@ -73,6 +93,26 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text.avr-libc
+                0x00000000       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .text.avr-libc
+                0x00000000       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .text.avr-libc
+                0x00000000       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .text.avr-libc
+                0x00000000       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
 
 Memory Configuration
 
@@ -430,11 +470,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xaa3
+.debug_info     0x00000000      0xad4
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_info    0x000004e6      0x316 HAL/MCAL/DIO/Program.o
- .debug_info    0x000007fc      0x2a7 main.o
+ .debug_info    0x000004e6      0x339 HAL/MCAL/DIO/Program.o
+ .debug_info    0x0000081f      0x2b5 main.o
 
 .debug_abbrev   0x00000000      0x6de
  *(.debug_abbrev)
@@ -453,13 +493,13 @@ END GROUP
  .debug_frame   0x00000000       0x64 HAL/MCAL/DIO/Program.o
  .debug_frame   0x00000064       0x24 main.o
 
-.debug_str      0x00000000      0x515
+.debug_str      0x00000000      0x532
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_str     0x00000196      0x2fe HAL/MCAL/DIO/Program.o
-                                0x303 (size before relaxing)
- .debug_str     0x00000494       0x81 main.o
-                                0x2ff (size before relaxing)
+ .debug_str     0x00000196      0x31b HAL/MCAL/DIO/Program.o
+                                0x347 (size before relaxing)
+ .debug_str     0x000004b1       0x81 main.o
+                                0x31c (size before relaxing)
 
 .debug_loc      0x00000000      0x320
  *(.debug_loc)

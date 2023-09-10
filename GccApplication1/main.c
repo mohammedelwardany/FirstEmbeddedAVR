@@ -8,8 +8,7 @@
 #define F_CPU 16000000UL
 
 #include "Dio_Int.h"
-#include "AVR/delay.h"
-
+#include <util/delay.h>
 int main(void)
 {
 	DIO_Init();

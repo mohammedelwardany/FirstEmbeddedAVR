@@ -10,6 +10,8 @@
 #define PRIVATE_LCD_H_
 
 
+static void Private_LCDHalfPort(u8 copy_u8value);
+
 
 
 
