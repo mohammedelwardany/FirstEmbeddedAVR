@@ -14,6 +14,6 @@
 #define SetBit(R,N) ((R)|=(1<<N))
 #define ClrBit(R,N) ((R)&=~(1<<N))
 #define ToggleBit(R,N) ((R)^=(1<<N))
-#define GetBit(R,N) (((R)&=(1<<N))<<N)
+#define GetBit(R,N) ((R>>N)&1)
 
 #endif /* BITMATH_H_ */

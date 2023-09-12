@@ -15,8 +15,6 @@
 
 #include "Dio_Int.h"
 
-#include "Configure_LCD.h"
-#include "Private_LCD.h"
 
 
 typedef enum{
@@ -39,9 +37,10 @@ typedef enum{
 
 
 
-void init(void);
-void LCD_SendCmdDataCommend(u8 Val_u8,MODE LCD_INPUTMODE,Bitlvl LCD_BITLVL);
+void LCD_init(void);
+void LCD_SendData(u8 Val_u8);
 
+void LCD_SendCommend(u8 Val_u8);
 
 
 void LCD_voidWriteString(u8* copy_pu8String);
