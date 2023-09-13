@@ -5,6 +5,7 @@
  *  Author: m2010
  */ 
 #include <util/delay.h>
+#include <math.h>
 #include "types.h"
 
 #include "Interface_LCD.h"
@@ -91,7 +92,16 @@ void LCD_voidWriteString(u8* copy_pu8String){
 
 
 void LCD_voidWriteNumber(u32 copy_u32Number){
- 
+	u8 arr[20];
+	u8 i = 0;
+ 	for(i=0;copy_u32Number!=0;i++){
+	 arr[i] = (copy_u32Number%10)+48;
+	 //LCD_SendData(arr[i]);
+	 copy_u32Number/=10; 
+	 }
+ 	for(u8 j=0;j<i;j++){
+	 	LCD_SendData(arr[i-j-1]);
+ 	}
 }
 	
 
@@ -139,5 +149,17 @@ _delay_us(45);
 
 }
 void LCD_voidGoToSpecificPosition(u8 copy_u8LineNumber, u8 copy_u8Position){
+	switch (copy_u8LineNumber)
+	{
+	case 1:{
+	LCD_SendCommend(0b10000000+copy_u8Position);
+	break;
+	}
+	case 2:{
+		LCD_SendCommend(0b11000000+copy_u8Position);
+		break;
+	}
+	
+	}
 	
 }

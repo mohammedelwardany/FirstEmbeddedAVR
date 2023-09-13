@@ -12,33 +12,45 @@
 
 #include "Dio_Int.h"
 #include "Interface_LCD.h"
+#include "Interface_KeyBad.h"
 #include "Ex_Interups_Interface.h"
 #include "G_Interups_Interface.h"
 
+
+u8 KeyBad_Retrive;
 
 int main(void)
 {
 	DIO_Init();
 	LCD_init();
+	KEYPAD_uint8Init();
 // 	
 // 	GINTERUPTS_voidEnable();
 // 	EXInterupts_voidEnable(EX_INT1,EX_LOW_LEVEL);
 	LCD_SendData('A');
-	LCD_SendData('B');
-	
+	LCD_SendData(' ');
 
+
+	//LCD_voidWriteString("hello world");
+	
+	LCD_voidWriteNumber(234);
+	LCD_voidGoToSpecificPosition(2,3);
 	/*_delay_ms(500);
 	DIO_WritePinVal(Pin_A1,LOW);
 	_delay_ms(500);*/
     while(1)
 	{
+
 		
-		//_delay_ms(5000);
+					
+	
+		
+		//_delay_ms(50);
 		//_delay_ms(5000);
 	}
 	return 0;
 }
-
+//01202647194
 // 
 // 
 // void __vector_2(void) __attribute__((signal));

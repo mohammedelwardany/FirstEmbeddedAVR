@@ -3,55 +3,55 @@ GccApplication1.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000362  00000000  00000000  00000074  2**1
+  0 .text         000004de  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000030  00800060  00000362  000003d6  2**0
+  1 .data         00000030  00800060  000004de  00000552  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  00000406  2**0
+  2 .comment      00000030  00000000  00000000  00000582  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000438  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000005b4  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 000000b8  00000000  00000000  00000474  2**0
+  4 .debug_aranges 000000e0  00000000  00000000  000005f0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000011f0  00000000  00000000  0000052c  2**0
+  5 .debug_info   000016cb  00000000  00000000  000006d0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000007d7  00000000  00000000  0000171c  2**0
+  6 .debug_abbrev 00000989  00000000  00000000  00001d9b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000061f  00000000  00000000  00001ef3  2**0
+  7 .debug_line   000008a6  00000000  00000000  00002724  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000150  00000000  00000000  00002514  2**2
+  8 .debug_frame  00000218  00000000  00000000  00002fcc  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000006ad  00000000  00000000  00002664  2**0
+  9 .debug_str    0000078d  00000000  00000000  000031e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000077a  00000000  00000000  00002d11  2**0
+ 10 .debug_loc    00000b63  00000000  00000000  00003971  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000088  00000000  00000000  0000348b  2**0
+ 11 .debug_ranges 000000a0  00000000  00000000  000044d4  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
-   4:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-   8:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-   c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  10:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  14:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  18:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  1c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  20:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  24:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  28:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  2c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  30:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  34:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  38:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  3c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  40:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  44:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  48:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  4c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
-  50:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
 
 00000054 <__ctors_end>:
   54:	11 24       	eor	r1, r1
@@ -65,485 +65,635 @@ Disassembly of section .text:
   60:	10 e0       	ldi	r17, 0x00	; 0
   62:	a0 e6       	ldi	r26, 0x60	; 96
   64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	e2 e6       	ldi	r30, 0x62	; 98
-  68:	f3 e0       	ldi	r31, 0x03	; 3
+  66:	ee ed       	ldi	r30, 0xDE	; 222
+  68:	f4 e0       	ldi	r31, 0x04	; 4
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
   70:	a0 39       	cpi	r26, 0x90	; 144
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
-  76:	0e 94 a4 01 	call	0x348	; 0x348 <main>
-  7a:	0c 94 af 01 	jmp	0x35e	; 0x35e <_exit>
 
-0000007e <__bad_interrupt>:
-  7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	a0 e9       	ldi	r26, 0x90	; 144
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
 
-00000082 <Private_LCDHalfPort>:
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
 
+00000080 <.do_clear_bss_start>:
+  80:	a0 39       	cpi	r26, 0x90	; 144
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 34 02 	call	0x468	; 0x468 <main>
+  8a:	0c 94 6d 02 	jmp	0x4da	; 0x4da <_exit>
 
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
+00000092 <KEYPAD_uint8Init>:
+ #include"util/delay.h"
 
-///////////////////////////////////prepare///////////////////////////////////////
-static void Private_LCDHalfPort(u8 copy_u8value){
-  82:	cf 93       	push	r28
-  84:	c8 2f       	mov	r28, r24
-	DIO_WritePinVal(LCD_D4,GetBit(copy_u8value,0));
-  86:	68 2f       	mov	r22, r24
-  88:	61 70       	andi	r22, 0x01	; 1
-  8a:	88 e0       	ldi	r24, 0x08	; 8
-  8c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-	DIO_WritePinVal(LCD_D5,GetBit(copy_u8value,1));
-  90:	c1 fb       	bst	r28, 1
-  92:	66 27       	eor	r22, r22
-  94:	60 f9       	bld	r22, 0
-  96:	89 e0       	ldi	r24, 0x09	; 9
-  98:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-	DIO_WritePinVal(LCD_D6,GetBit(copy_u8value,2));
-  9c:	c2 fb       	bst	r28, 2
-  9e:	66 27       	eor	r22, r22
-  a0:	60 f9       	bld	r22, 0
-  a2:	8a e0       	ldi	r24, 0x0A	; 10
-  a4:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-	DIO_WritePinVal(LCD_D7,GetBit(copy_u8value,3));
-  a8:	c3 fb       	bst	r28, 3
-  aa:	66 27       	eor	r22, r22
-  ac:	60 f9       	bld	r22, 0
-  ae:	8c e0       	ldi	r24, 0x0C	; 12
-  b0:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-}
-  b4:	cf 91       	pop	r28
-  b6:	08 95       	ret
+ void KEYPAD_uint8Init(void)
+ {
+	 //Set rows as input
+	 Dio_SetPinMode(KEYPAD_COLUMN_1 , InPut_PullUp);
+  92:	63 e0       	ldi	r22, 0x03	; 3
+  94:	8f e1       	ldi	r24, 0x1F	; 31
+  96:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+	 Dio_SetPinMode(KEYPAD_COLUMN_2 , InPut_PullUp);
+  9a:	63 e0       	ldi	r22, 0x03	; 3
+  9c:	8e e1       	ldi	r24, 0x1E	; 30
+  9e:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+	 Dio_SetPinMode(KEYPAD_COLUMN_3 , InPut_PullUp);
+  a2:	63 e0       	ldi	r22, 0x03	; 3
+  a4:	8d e1       	ldi	r24, 0x1D	; 29
+  a6:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+	 Dio_SetPinMode(KEYPAD_COLUMN_4 , InPut_PullUp);
+  aa:	63 e0       	ldi	r22, 0x03	; 3
+  ac:	8b e1       	ldi	r24, 0x1B	; 27
+  ae:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
 
-000000b8 <LCD_SendData>:
+	 //Set Columns as output
+	 //Deactivate for all columns by setting it to High
+	 Dio_SetPinMode(KEYPAD_ROW_1 , OutPut_High);
+  b2:	60 e0       	ldi	r22, 0x00	; 0
+  b4:	85 e1       	ldi	r24, 0x15	; 21
+  b6:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+	 Dio_SetPinMode(KEYPAD_ROW_2 , OutPut_High);
+  ba:	60 e0       	ldi	r22, 0x00	; 0
+  bc:	84 e1       	ldi	r24, 0x14	; 20
+  be:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+	 Dio_SetPinMode(KEYPAD_ROW_3 , OutPut_High);
+  c2:	60 e0       	ldi	r22, 0x00	; 0
+  c4:	83 e1       	ldi	r24, 0x13	; 19
+  c6:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+	 Dio_SetPinMode(KEYPAD_ROW_4 , OutPut_High);
+  ca:	60 e0       	ldi	r22, 0x00	; 0
+  cc:	82 e1       	ldi	r24, 0x12	; 18
+  ce:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+  d2:	08 95       	ret
 
-
-
-///////////////////////////////////SENDING///////////////////////////////////////
-
-void LCD_SendData(u8 Val_u8){
-  b8:	cf 93       	push	r28
-  ba:	c8 2f       	mov	r28, r24
-			DIO_WritePinVal(RS,HIGH);
-  bc:	61 e0       	ldi	r22, 0x01	; 1
-  be:	83 e0       	ldi	r24, 0x03	; 3
-  c0:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-			Private_LCDHalfPort(Val_u8>>4);
-  c4:	8c 2f       	mov	r24, r28
-  c6:	82 95       	swap	r24
-  c8:	8f 70       	andi	r24, 0x0F	; 15
-  ca:	0e 94 41 00 	call	0x82	; 0x82 <Private_LCDHalfPort>
-			DIO_WritePinVal(EN,HIGH);
-  ce:	61 e0       	ldi	r22, 0x01	; 1
-  d0:	82 e0       	ldi	r24, 0x02	; 2
-  d2:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
+000000d4 <Private_LCDHalfPort>:
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  d6:	8a e0       	ldi	r24, 0x0A	; 10
-  d8:	8a 95       	dec	r24
-  da:	f1 f7       	brne	.-4      	; 0xd8 <LCD_SendData+0x20>
-			_delay_us(30);
-			DIO_WritePinVal(EN,LOW);
-  dc:	60 e0       	ldi	r22, 0x00	; 0
-  de:	82 e0       	ldi	r24, 0x02	; 2
-  e0:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-			Private_LCDHalfPort(Val_u8);
-  e4:	8c 2f       	mov	r24, r28
-  e6:	0e 94 41 00 	call	0x82	; 0x82 <Private_LCDHalfPort>
-			DIO_WritePinVal(EN,HIGH);
-  ea:	61 e0       	ldi	r22, 0x01	; 1
-  ec:	82 e0       	ldi	r24, 0x02	; 2
-  ee:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-  f2:	8a e0       	ldi	r24, 0x0A	; 10
-  f4:	8a 95       	dec	r24
-  f6:	f1 f7       	brne	.-4      	; 0xf4 <LCD_SendData+0x3c>
-			_delay_us(30);
-			DIO_WritePinVal(EN,LOW);
-  f8:	60 e0       	ldi	r22, 0x00	; 0
-  fa:	82 e0       	ldi	r24, 0x02	; 2
-  fc:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-}
- 100:	cf 91       	pop	r28
- 102:	08 95       	ret
+  d4:	cf 93       	push	r28
+  d6:	c8 2f       	mov	r28, r24
+  d8:	68 2f       	mov	r22, r24
+  da:	61 70       	andi	r22, 0x01	; 1
+  dc:	88 e0       	ldi	r24, 0x08	; 8
+  de:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+  e2:	c1 fb       	bst	r28, 1
+  e4:	66 27       	eor	r22, r22
+  e6:	60 f9       	bld	r22, 0
+  e8:	89 e0       	ldi	r24, 0x09	; 9
+  ea:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+  ee:	c2 fb       	bst	r28, 2
+  f0:	66 27       	eor	r22, r22
+  f2:	60 f9       	bld	r22, 0
+  f4:	8a e0       	ldi	r24, 0x0A	; 10
+  f6:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+  fa:	c3 fb       	bst	r28, 3
+  fc:	66 27       	eor	r22, r22
+  fe:	60 f9       	bld	r22, 0
+ 100:	8c e0       	ldi	r24, 0x0C	; 12
+ 102:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 106:	cf 91       	pop	r28
+ 108:	08 95       	ret
 
-00000104 <LCD_SendCommend>:
+0000010a <LCD_SendData>:
+ 10a:	cf 93       	push	r28
+ 10c:	c8 2f       	mov	r28, r24
+ 10e:	61 e0       	ldi	r22, 0x01	; 1
+ 110:	83 e0       	ldi	r24, 0x03	; 3
+ 112:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 116:	8c 2f       	mov	r24, r28
+ 118:	82 95       	swap	r24
+ 11a:	8f 70       	andi	r24, 0x0F	; 15
+ 11c:	0e 94 6a 00 	call	0xd4	; 0xd4 <Private_LCDHalfPort>
+ 120:	61 e0       	ldi	r22, 0x01	; 1
+ 122:	82 e0       	ldi	r24, 0x02	; 2
+ 124:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 128:	8a e0       	ldi	r24, 0x0A	; 10
+ 12a:	8a 95       	dec	r24
+ 12c:	f1 f7       	brne	.-4      	; 0x12a <LCD_SendData+0x20>
+ 12e:	60 e0       	ldi	r22, 0x00	; 0
+ 130:	82 e0       	ldi	r24, 0x02	; 2
+ 132:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 136:	8c 2f       	mov	r24, r28
+ 138:	0e 94 6a 00 	call	0xd4	; 0xd4 <Private_LCDHalfPort>
+ 13c:	61 e0       	ldi	r22, 0x01	; 1
+ 13e:	82 e0       	ldi	r24, 0x02	; 2
+ 140:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 144:	8a e0       	ldi	r24, 0x0A	; 10
+ 146:	8a 95       	dec	r24
+ 148:	f1 f7       	brne	.-4      	; 0x146 <LCD_SendData+0x3c>
+ 14a:	60 e0       	ldi	r22, 0x00	; 0
+ 14c:	82 e0       	ldi	r24, 0x02	; 2
+ 14e:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 152:	cf 91       	pop	r28
+ 154:	08 95       	ret
 
-void LCD_SendCommend(u8 Val_u8){
- 104:	cf 93       	push	r28
- 106:	c8 2f       	mov	r28, r24
-			DIO_WritePinVal(RS,LOW);
- 108:	60 e0       	ldi	r22, 0x00	; 0
- 10a:	83 e0       	ldi	r24, 0x03	; 3
- 10c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-			Private_LCDHalfPort(Val_u8>>4);
- 110:	8c 2f       	mov	r24, r28
- 112:	82 95       	swap	r24
- 114:	8f 70       	andi	r24, 0x0F	; 15
- 116:	0e 94 41 00 	call	0x82	; 0x82 <Private_LCDHalfPort>
-			DIO_WritePinVal(EN,HIGH);
- 11a:	61 e0       	ldi	r22, 0x01	; 1
- 11c:	82 e0       	ldi	r24, 0x02	; 2
- 11e:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
- 122:	8a e0       	ldi	r24, 0x0A	; 10
- 124:	8a 95       	dec	r24
- 126:	f1 f7       	brne	.-4      	; 0x124 <LCD_SendCommend+0x20>
-			_delay_us(30);
-			DIO_WritePinVal(EN,LOW);
- 128:	60 e0       	ldi	r22, 0x00	; 0
- 12a:	82 e0       	ldi	r24, 0x02	; 2
- 12c:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-			Private_LCDHalfPort(Val_u8);
- 130:	8c 2f       	mov	r24, r28
- 132:	0e 94 41 00 	call	0x82	; 0x82 <Private_LCDHalfPort>
-			DIO_WritePinVal(EN,HIGH);
- 136:	61 e0       	ldi	r22, 0x01	; 1
- 138:	82 e0       	ldi	r24, 0x02	; 2
- 13a:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
- 13e:	8a e0       	ldi	r24, 0x0A	; 10
- 140:	8a 95       	dec	r24
- 142:	f1 f7       	brne	.-4      	; 0x140 <LCD_SendCommend+0x3c>
-			_delay_us(30);
-			DIO_WritePinVal(EN,LOW);
- 144:	60 e0       	ldi	r22, 0x00	; 0
- 146:	82 e0       	ldi	r24, 0x02	; 2
- 148:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-}
- 14c:	cf 91       	pop	r28
- 14e:	08 95       	ret
-
-00000150 <LCD_init>:
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
- 150:	8d e2       	ldi	r24, 0x2D	; 45
- 152:	92 e2       	ldi	r25, 0x22	; 34
- 154:	01 97       	sbiw	r24, 0x01	; 1
- 156:	f1 f7       	brne	.-4      	; 0x154 <LCD_init+0x4>
- 158:	00 c0       	rjmp	.+0      	; 0x15a <LCD_init+0xa>
- 15a:	00 00       	nop
-	
-
-
-void LCD_init(void){
-	_delay_ms(35);
-	Private_LCDHalfPort(0b0010);
- 15c:	82 e0       	ldi	r24, 0x02	; 2
- 15e:	0e 94 41 00 	call	0x82	; 0x82 <Private_LCDHalfPort>
-	DIO_WritePinVal(EN,HIGH);
- 162:	61 e0       	ldi	r22, 0x01	; 1
- 164:	82 e0       	ldi	r24, 0x02	; 2
- 166:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
- 16a:	89 ef       	ldi	r24, 0xF9	; 249
- 16c:	90 e0       	ldi	r25, 0x00	; 0
- 16e:	01 97       	sbiw	r24, 0x01	; 1
- 170:	f1 f7       	brne	.-4      	; 0x16e <LCD_init+0x1e>
- 172:	00 c0       	rjmp	.+0      	; 0x174 <LCD_init+0x24>
- 174:	00 00       	nop
-	_delay_ms(1);
-	DIO_WritePinVal(EN,LOW);
- 176:	60 e0       	ldi	r22, 0x00	; 0
- 178:	82 e0       	ldi	r24, 0x02	; 2
- 17a:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_WritePinVal>
-	LCD_SendCommend(0b00101000);//last2
- 17e:	88 e2       	ldi	r24, 0x28	; 40
- 180:	0e 94 82 00 	call	0x104	; 0x104 <LCD_SendCommend>
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
- 184:	9f e0       	ldi	r25, 0x0F	; 15
- 186:	9a 95       	dec	r25
- 188:	f1 f7       	brne	.-4      	; 0x186 <LCD_init+0x36>
-	_delay_us(45);
-	LCD_SendCommend(0b00001111);  // last3
- 18a:	8f e0       	ldi	r24, 0x0F	; 15
- 18c:	0e 94 82 00 	call	0x104	; 0x104 <LCD_SendCommend>
- 190:	8f e0       	ldi	r24, 0x0F	; 15
+00000156 <LCD_SendCommend>:
+ 156:	cf 93       	push	r28
+ 158:	c8 2f       	mov	r28, r24
+ 15a:	60 e0       	ldi	r22, 0x00	; 0
+ 15c:	83 e0       	ldi	r24, 0x03	; 3
+ 15e:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 162:	8c 2f       	mov	r24, r28
+ 164:	82 95       	swap	r24
+ 166:	8f 70       	andi	r24, 0x0F	; 15
+ 168:	0e 94 6a 00 	call	0xd4	; 0xd4 <Private_LCDHalfPort>
+ 16c:	61 e0       	ldi	r22, 0x01	; 1
+ 16e:	82 e0       	ldi	r24, 0x02	; 2
+ 170:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 174:	8a e0       	ldi	r24, 0x0A	; 10
+ 176:	8a 95       	dec	r24
+ 178:	f1 f7       	brne	.-4      	; 0x176 <LCD_SendCommend+0x20>
+ 17a:	60 e0       	ldi	r22, 0x00	; 0
+ 17c:	82 e0       	ldi	r24, 0x02	; 2
+ 17e:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 182:	8c 2f       	mov	r24, r28
+ 184:	0e 94 6a 00 	call	0xd4	; 0xd4 <Private_LCDHalfPort>
+ 188:	61 e0       	ldi	r22, 0x01	; 1
+ 18a:	82 e0       	ldi	r24, 0x02	; 2
+ 18c:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 190:	8a e0       	ldi	r24, 0x0A	; 10
  192:	8a 95       	dec	r24
- 194:	f1 f7       	brne	.-4      	; 0x192 <LCD_init+0x42>
-	_delay_us(45);
-	LCD_SendCommend(0b00000001);  //
- 196:	81 e0       	ldi	r24, 0x01	; 1
- 198:	0e 94 82 00 	call	0x104	; 0x104 <LCD_SendCommend>
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
+ 194:	f1 f7       	brne	.-4      	; 0x192 <LCD_SendCommend+0x3c>
+ 196:	60 e0       	ldi	r22, 0x00	; 0
+ 198:	82 e0       	ldi	r24, 0x02	; 2
+ 19a:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 19e:	cf 91       	pop	r28
+ 1a0:	08 95       	ret
 
-	__builtin_avr_delay_cycles(__ticks_dc);
- 19c:	83 ef       	ldi	r24, 0xF3	; 243
- 19e:	91 e0       	ldi	r25, 0x01	; 1
- 1a0:	01 97       	sbiw	r24, 0x01	; 1
- 1a2:	f1 f7       	brne	.-4      	; 0x1a0 <LCD_init+0x50>
- 1a4:	00 c0       	rjmp	.+0      	; 0x1a6 <LCD_init+0x56>
- 1a6:	00 00       	nop
-	_delay_ms(2);
-	LCD_SendCommend(0b00000110);  //last2
- 1a8:	86 e0       	ldi	r24, 0x06	; 6
- 1aa:	0e 94 82 00 	call	0x104	; 0x104 <LCD_SendCommend>
- 1ae:	08 95       	ret
+000001a2 <LCD_init>:
+ 1a2:	8d e2       	ldi	r24, 0x2D	; 45
+ 1a4:	92 e2       	ldi	r25, 0x22	; 34
+ 1a6:	01 97       	sbiw	r24, 0x01	; 1
+ 1a8:	f1 f7       	brne	.-4      	; 0x1a6 <LCD_init+0x4>
+ 1aa:	00 c0       	rjmp	.+0      	; 0x1ac <LCD_init+0xa>
+ 1ac:	00 00       	nop
+ 1ae:	82 e0       	ldi	r24, 0x02	; 2
+ 1b0:	0e 94 6a 00 	call	0xd4	; 0xd4 <Private_LCDHalfPort>
+ 1b4:	61 e0       	ldi	r22, 0x01	; 1
+ 1b6:	82 e0       	ldi	r24, 0x02	; 2
+ 1b8:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 1bc:	89 ef       	ldi	r24, 0xF9	; 249
+ 1be:	90 e0       	ldi	r25, 0x00	; 0
+ 1c0:	01 97       	sbiw	r24, 0x01	; 1
+ 1c2:	f1 f7       	brne	.-4      	; 0x1c0 <LCD_init+0x1e>
+ 1c4:	00 c0       	rjmp	.+0      	; 0x1c6 <LCD_init+0x24>
+ 1c6:	00 00       	nop
+ 1c8:	60 e0       	ldi	r22, 0x00	; 0
+ 1ca:	82 e0       	ldi	r24, 0x02	; 2
+ 1cc:	0e 94 00 02 	call	0x400	; 0x400 <DIO_WritePinVal>
+ 1d0:	88 e2       	ldi	r24, 0x28	; 40
+ 1d2:	0e 94 ab 00 	call	0x156	; 0x156 <LCD_SendCommend>
+ 1d6:	9f e0       	ldi	r25, 0x0F	; 15
+ 1d8:	9a 95       	dec	r25
+ 1da:	f1 f7       	brne	.-4      	; 0x1d8 <LCD_init+0x36>
+ 1dc:	8f e0       	ldi	r24, 0x0F	; 15
+ 1de:	0e 94 ab 00 	call	0x156	; 0x156 <LCD_SendCommend>
+ 1e2:	8f e0       	ldi	r24, 0x0F	; 15
+ 1e4:	8a 95       	dec	r24
+ 1e6:	f1 f7       	brne	.-4      	; 0x1e4 <LCD_init+0x42>
+ 1e8:	81 e0       	ldi	r24, 0x01	; 1
+ 1ea:	0e 94 ab 00 	call	0x156	; 0x156 <LCD_SendCommend>
+ 1ee:	83 ef       	ldi	r24, 0xF3	; 243
+ 1f0:	91 e0       	ldi	r25, 0x01	; 1
+ 1f2:	01 97       	sbiw	r24, 0x01	; 1
+ 1f4:	f1 f7       	brne	.-4      	; 0x1f2 <LCD_init+0x50>
+ 1f6:	00 c0       	rjmp	.+0      	; 0x1f8 <LCD_init+0x56>
+ 1f8:	00 00       	nop
+ 1fa:	86 e0       	ldi	r24, 0x06	; 6
+ 1fc:	0e 94 ab 00 	call	0x156	; 0x156 <LCD_SendCommend>
+ 200:	08 95       	ret
 
-000001b0 <Dio_SetPinMode>:
+00000202 <LCD_voidWriteNumber>:
+ 202:	8f 92       	push	r8
+ 204:	9f 92       	push	r9
+ 206:	af 92       	push	r10
+ 208:	bf 92       	push	r11
+ 20a:	ef 92       	push	r14
+ 20c:	ff 92       	push	r15
+ 20e:	0f 93       	push	r16
+ 210:	1f 93       	push	r17
+ 212:	cf 93       	push	r28
+ 214:	df 93       	push	r29
+ 216:	cd b7       	in	r28, 0x3d	; 61
+ 218:	de b7       	in	r29, 0x3e	; 62
+ 21a:	64 97       	sbiw	r28, 0x14	; 20
+ 21c:	0f b6       	in	r0, 0x3f	; 63
+ 21e:	f8 94       	cli
+ 220:	de bf       	out	0x3e, r29	; 62
+ 222:	0f be       	out	0x3f, r0	; 63
+ 224:	cd bf       	out	0x3d, r28	; 61
+ 226:	61 15       	cp	r22, r1
+ 228:	71 05       	cpc	r23, r1
+ 22a:	81 05       	cpc	r24, r1
+ 22c:	91 05       	cpc	r25, r1
+ 22e:	d9 f1       	breq	.+118    	; 0x2a6 <LCD_voidWriteNumber+0xa4>
+ 230:	f1 2c       	mov	r15, r1
+ 232:	0f 2e       	mov	r0, r31
+ 234:	fa e0       	ldi	r31, 0x0A	; 10
+ 236:	8f 2e       	mov	r8, r31
+ 238:	91 2c       	mov	r9, r1
+ 23a:	a1 2c       	mov	r10, r1
+ 23c:	b1 2c       	mov	r11, r1
+ 23e:	f0 2d       	mov	r31, r0
+ 240:	01 c0       	rjmp	.+2      	; 0x244 <LCD_voidWriteNumber+0x42>
+ 242:	f0 2e       	mov	r15, r16
+ 244:	01 e0       	ldi	r16, 0x01	; 1
+ 246:	10 e0       	ldi	r17, 0x00	; 0
+ 248:	0c 0f       	add	r16, r28
+ 24a:	1d 1f       	adc	r17, r29
+ 24c:	0f 0d       	add	r16, r15
+ 24e:	11 1d       	adc	r17, r1
+ 250:	a5 01       	movw	r20, r10
+ 252:	94 01       	movw	r18, r8
+ 254:	0e 94 4b 02 	call	0x496	; 0x496 <__udivmodsi4>
+ 258:	60 5d       	subi	r22, 0xD0	; 208
+ 25a:	f8 01       	movw	r30, r16
+ 25c:	60 83       	st	Z, r22
+ 25e:	62 2f       	mov	r22, r18
+ 260:	73 2f       	mov	r23, r19
+ 262:	84 2f       	mov	r24, r20
+ 264:	95 2f       	mov	r25, r21
+ 266:	01 e0       	ldi	r16, 0x01	; 1
+ 268:	0f 0d       	add	r16, r15
+ 26a:	61 15       	cp	r22, r1
+ 26c:	71 05       	cpc	r23, r1
+ 26e:	81 05       	cpc	r24, r1
+ 270:	91 05       	cpc	r25, r1
+ 272:	39 f7       	brne	.-50     	; 0x242 <LCD_voidWriteNumber+0x40>
+ 274:	00 23       	and	r16, r16
+ 276:	b9 f0       	breq	.+46     	; 0x2a6 <LCD_voidWriteNumber+0xa4>
+ 278:	10 e0       	ldi	r17, 0x00	; 0
+ 27a:	c8 01       	movw	r24, r16
+ 27c:	01 97       	sbiw	r24, 0x01	; 1
+ 27e:	21 e0       	ldi	r18, 0x01	; 1
+ 280:	30 e0       	ldi	r19, 0x00	; 0
+ 282:	2c 0f       	add	r18, r28
+ 284:	3d 1f       	adc	r19, r29
+ 286:	02 0f       	add	r16, r18
+ 288:	13 1f       	adc	r17, r19
+ 28a:	fc 01       	movw	r30, r24
+ 28c:	ef 19       	sub	r30, r15
+ 28e:	f1 09       	sbc	r31, r1
+ 290:	7f 01       	movw	r14, r30
+ 292:	e2 0e       	add	r14, r18
+ 294:	f3 1e       	adc	r15, r19
+ 296:	f8 01       	movw	r30, r16
+ 298:	82 91       	ld	r24, -Z
+ 29a:	8f 01       	movw	r16, r30
+ 29c:	0e 94 85 00 	call	0x10a	; 0x10a <LCD_SendData>
+ 2a0:	0e 15       	cp	r16, r14
+ 2a2:	1f 05       	cpc	r17, r15
+ 2a4:	c1 f7       	brne	.-16     	; 0x296 <LCD_voidWriteNumber+0x94>
+ 2a6:	64 96       	adiw	r28, 0x14	; 20
+ 2a8:	0f b6       	in	r0, 0x3f	; 63
+ 2aa:	f8 94       	cli
+ 2ac:	de bf       	out	0x3e, r29	; 62
+ 2ae:	0f be       	out	0x3f, r0	; 63
+ 2b0:	cd bf       	out	0x3d, r28	; 61
+ 2b2:	df 91       	pop	r29
+ 2b4:	cf 91       	pop	r28
+ 2b6:	1f 91       	pop	r17
+ 2b8:	0f 91       	pop	r16
+ 2ba:	ff 90       	pop	r15
+ 2bc:	ef 90       	pop	r14
+ 2be:	bf 90       	pop	r11
+ 2c0:	af 90       	pop	r10
+ 2c2:	9f 90       	pop	r9
+ 2c4:	8f 90       	pop	r8
+ 2c6:	08 95       	ret
+
+000002c8 <LCD_voidGoToSpecificPosition>:
+_delay_us(45);
+
+}
+void LCD_voidGoToSpecificPosition(u8 copy_u8LineNumber, u8 copy_u8Position){
+	
+	LCD_SendCommend(0b10000000);
+ 2c8:	80 e8       	ldi	r24, 0x80	; 128
+ 2ca:	0e 94 ab 00 	call	0x156	; 0x156 <LCD_SendCommend>
+ 2ce:	08 95       	ret
+
+000002d0 <Dio_SetPinMode>:
 {
 	
 	Pin_Type Port_Index = Pin_ID / 8;
 	Pin_Type Pin_Index  = Pin_ID % 8;
 	
 	*ReadBufferPTR = GetBit(*DIO_RegPIN[Port_Index],Pin_Index);
- 1b0:	28 2f       	mov	r18, r24
- 1b2:	26 95       	lsr	r18
- 1b4:	26 95       	lsr	r18
- 1b6:	26 95       	lsr	r18
- 1b8:	87 70       	andi	r24, 0x07	; 7
- 1ba:	61 30       	cpi	r22, 0x01	; 1
- 1bc:	39 f1       	breq	.+78     	; 0x20c <Dio_SetPinMode+0x5c>
- 1be:	38 f0       	brcs	.+14     	; 0x1ce <Dio_SetPinMode+0x1e>
- 1c0:	62 30       	cpi	r22, 0x02	; 2
- 1c2:	09 f4       	brne	.+2      	; 0x1c6 <Dio_SetPinMode+0x16>
- 1c4:	43 c0       	rjmp	.+134    	; 0x24c <Dio_SetPinMode+0x9c>
- 1c6:	63 30       	cpi	r22, 0x03	; 3
- 1c8:	09 f4       	brne	.+2      	; 0x1cc <Dio_SetPinMode+0x1c>
- 1ca:	57 c0       	rjmp	.+174    	; 0x27a <Dio_SetPinMode+0xca>
- 1cc:	08 95       	ret
- 1ce:	30 e0       	ldi	r19, 0x00	; 0
- 1d0:	22 0f       	add	r18, r18
- 1d2:	33 1f       	adc	r19, r19
- 1d4:	f9 01       	movw	r30, r18
- 1d6:	e0 58       	subi	r30, 0x80	; 128
- 1d8:	ff 4f       	sbci	r31, 0xFF	; 255
- 1da:	01 90       	ld	r0, Z+
- 1dc:	f0 81       	ld	r31, Z
- 1de:	e0 2d       	mov	r30, r0
- 1e0:	41 e0       	ldi	r20, 0x01	; 1
- 1e2:	50 e0       	ldi	r21, 0x00	; 0
- 1e4:	ba 01       	movw	r22, r20
- 1e6:	02 c0       	rjmp	.+4      	; 0x1ec <Dio_SetPinMode+0x3c>
- 1e8:	66 0f       	add	r22, r22
- 1ea:	77 1f       	adc	r23, r23
- 1ec:	8a 95       	dec	r24
- 1ee:	e2 f7       	brpl	.-8      	; 0x1e8 <Dio_SetPinMode+0x38>
- 1f0:	cb 01       	movw	r24, r22
- 1f2:	90 81       	ld	r25, Z
- 1f4:	98 2b       	or	r25, r24
- 1f6:	90 83       	st	Z, r25
- 1f8:	f9 01       	movw	r30, r18
- 1fa:	e8 57       	subi	r30, 0x78	; 120
- 1fc:	ff 4f       	sbci	r31, 0xFF	; 255
- 1fe:	01 90       	ld	r0, Z+
- 200:	f0 81       	ld	r31, Z
- 202:	e0 2d       	mov	r30, r0
- 204:	90 81       	ld	r25, Z
- 206:	89 2b       	or	r24, r25
- 208:	80 83       	st	Z, r24
- 20a:	08 95       	ret
- 20c:	30 e0       	ldi	r19, 0x00	; 0
- 20e:	22 0f       	add	r18, r18
- 210:	33 1f       	adc	r19, r19
- 212:	f9 01       	movw	r30, r18
- 214:	e0 58       	subi	r30, 0x80	; 128
- 216:	ff 4f       	sbci	r31, 0xFF	; 255
- 218:	01 90       	ld	r0, Z+
- 21a:	f0 81       	ld	r31, Z
- 21c:	e0 2d       	mov	r30, r0
- 21e:	41 e0       	ldi	r20, 0x01	; 1
- 220:	50 e0       	ldi	r21, 0x00	; 0
- 222:	ba 01       	movw	r22, r20
- 224:	02 c0       	rjmp	.+4      	; 0x22a <Dio_SetPinMode+0x7a>
- 226:	66 0f       	add	r22, r22
- 228:	77 1f       	adc	r23, r23
- 22a:	8a 95       	dec	r24
- 22c:	e2 f7       	brpl	.-8      	; 0x226 <Dio_SetPinMode+0x76>
- 22e:	cb 01       	movw	r24, r22
- 230:	90 81       	ld	r25, Z
- 232:	98 2b       	or	r25, r24
- 234:	90 83       	st	Z, r25
- 236:	f9 01       	movw	r30, r18
- 238:	e8 57       	subi	r30, 0x78	; 120
- 23a:	ff 4f       	sbci	r31, 0xFF	; 255
- 23c:	01 90       	ld	r0, Z+
- 23e:	f0 81       	ld	r31, Z
- 240:	e0 2d       	mov	r30, r0
- 242:	80 95       	com	r24
- 244:	90 81       	ld	r25, Z
- 246:	89 23       	and	r24, r25
- 248:	80 83       	st	Z, r24
- 24a:	08 95       	ret
- 24c:	e2 2f       	mov	r30, r18
- 24e:	f0 e0       	ldi	r31, 0x00	; 0
- 250:	ee 0f       	add	r30, r30
- 252:	ff 1f       	adc	r31, r31
- 254:	e0 58       	subi	r30, 0x80	; 128
- 256:	ff 4f       	sbci	r31, 0xFF	; 255
- 258:	01 90       	ld	r0, Z+
- 25a:	f0 81       	ld	r31, Z
- 25c:	e0 2d       	mov	r30, r0
- 25e:	21 e0       	ldi	r18, 0x01	; 1
- 260:	30 e0       	ldi	r19, 0x00	; 0
- 262:	a9 01       	movw	r20, r18
- 264:	02 c0       	rjmp	.+4      	; 0x26a <Dio_SetPinMode+0xba>
- 266:	44 0f       	add	r20, r20
- 268:	55 1f       	adc	r21, r21
- 26a:	8a 95       	dec	r24
- 26c:	e2 f7       	brpl	.-8      	; 0x266 <Dio_SetPinMode+0xb6>
- 26e:	ca 01       	movw	r24, r20
- 270:	80 95       	com	r24
- 272:	90 81       	ld	r25, Z
- 274:	89 23       	and	r24, r25
- 276:	80 83       	st	Z, r24
- 278:	08 95       	ret
- 27a:	30 e0       	ldi	r19, 0x00	; 0
- 27c:	22 0f       	add	r18, r18
- 27e:	33 1f       	adc	r19, r19
- 280:	f9 01       	movw	r30, r18
- 282:	e0 58       	subi	r30, 0x80	; 128
- 284:	ff 4f       	sbci	r31, 0xFF	; 255
- 286:	01 90       	ld	r0, Z+
- 288:	f0 81       	ld	r31, Z
- 28a:	e0 2d       	mov	r30, r0
- 28c:	41 e0       	ldi	r20, 0x01	; 1
- 28e:	50 e0       	ldi	r21, 0x00	; 0
- 290:	ba 01       	movw	r22, r20
- 292:	02 c0       	rjmp	.+4      	; 0x298 <Dio_SetPinMode+0xe8>
- 294:	66 0f       	add	r22, r22
- 296:	77 1f       	adc	r23, r23
- 298:	8a 95       	dec	r24
- 29a:	e2 f7       	brpl	.-8      	; 0x294 <Dio_SetPinMode+0xe4>
- 29c:	cb 01       	movw	r24, r22
- 29e:	80 95       	com	r24
- 2a0:	90 81       	ld	r25, Z
- 2a2:	98 23       	and	r25, r24
- 2a4:	90 83       	st	Z, r25
- 2a6:	f9 01       	movw	r30, r18
- 2a8:	e8 57       	subi	r30, 0x78	; 120
- 2aa:	ff 4f       	sbci	r31, 0xFF	; 255
- 2ac:	01 90       	ld	r0, Z+
- 2ae:	f0 81       	ld	r31, Z
- 2b0:	e0 2d       	mov	r30, r0
- 2b2:	90 81       	ld	r25, Z
- 2b4:	89 23       	and	r24, r25
- 2b6:	80 83       	st	Z, r24
- 2b8:	08 95       	ret
+ 2d0:	28 2f       	mov	r18, r24
+ 2d2:	26 95       	lsr	r18
+ 2d4:	26 95       	lsr	r18
+ 2d6:	26 95       	lsr	r18
+ 2d8:	87 70       	andi	r24, 0x07	; 7
+ 2da:	61 30       	cpi	r22, 0x01	; 1
+ 2dc:	39 f1       	breq	.+78     	; 0x32c <Dio_SetPinMode+0x5c>
+ 2de:	38 f0       	brcs	.+14     	; 0x2ee <Dio_SetPinMode+0x1e>
+ 2e0:	62 30       	cpi	r22, 0x02	; 2
+ 2e2:	09 f4       	brne	.+2      	; 0x2e6 <Dio_SetPinMode+0x16>
+ 2e4:	43 c0       	rjmp	.+134    	; 0x36c <Dio_SetPinMode+0x9c>
+ 2e6:	63 30       	cpi	r22, 0x03	; 3
+ 2e8:	09 f4       	brne	.+2      	; 0x2ec <Dio_SetPinMode+0x1c>
+ 2ea:	57 c0       	rjmp	.+174    	; 0x39a <Dio_SetPinMode+0xca>
+ 2ec:	08 95       	ret
+ 2ee:	30 e0       	ldi	r19, 0x00	; 0
+ 2f0:	22 0f       	add	r18, r18
+ 2f2:	33 1f       	adc	r19, r19
+ 2f4:	f9 01       	movw	r30, r18
+ 2f6:	e0 58       	subi	r30, 0x80	; 128
+ 2f8:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2fa:	01 90       	ld	r0, Z+
+ 2fc:	f0 81       	ld	r31, Z
+ 2fe:	e0 2d       	mov	r30, r0
+ 300:	41 e0       	ldi	r20, 0x01	; 1
+ 302:	50 e0       	ldi	r21, 0x00	; 0
+ 304:	ba 01       	movw	r22, r20
+ 306:	02 c0       	rjmp	.+4      	; 0x30c <Dio_SetPinMode+0x3c>
+ 308:	66 0f       	add	r22, r22
+ 30a:	77 1f       	adc	r23, r23
+ 30c:	8a 95       	dec	r24
+ 30e:	e2 f7       	brpl	.-8      	; 0x308 <Dio_SetPinMode+0x38>
+ 310:	cb 01       	movw	r24, r22
+ 312:	90 81       	ld	r25, Z
+ 314:	98 2b       	or	r25, r24
+ 316:	90 83       	st	Z, r25
+ 318:	f9 01       	movw	r30, r18
+ 31a:	e8 57       	subi	r30, 0x78	; 120
+ 31c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 31e:	01 90       	ld	r0, Z+
+ 320:	f0 81       	ld	r31, Z
+ 322:	e0 2d       	mov	r30, r0
+ 324:	90 81       	ld	r25, Z
+ 326:	89 2b       	or	r24, r25
+ 328:	80 83       	st	Z, r24
+ 32a:	08 95       	ret
+ 32c:	30 e0       	ldi	r19, 0x00	; 0
+ 32e:	22 0f       	add	r18, r18
+ 330:	33 1f       	adc	r19, r19
+ 332:	f9 01       	movw	r30, r18
+ 334:	e0 58       	subi	r30, 0x80	; 128
+ 336:	ff 4f       	sbci	r31, 0xFF	; 255
+ 338:	01 90       	ld	r0, Z+
+ 33a:	f0 81       	ld	r31, Z
+ 33c:	e0 2d       	mov	r30, r0
+ 33e:	41 e0       	ldi	r20, 0x01	; 1
+ 340:	50 e0       	ldi	r21, 0x00	; 0
+ 342:	ba 01       	movw	r22, r20
+ 344:	02 c0       	rjmp	.+4      	; 0x34a <Dio_SetPinMode+0x7a>
+ 346:	66 0f       	add	r22, r22
+ 348:	77 1f       	adc	r23, r23
+ 34a:	8a 95       	dec	r24
+ 34c:	e2 f7       	brpl	.-8      	; 0x346 <Dio_SetPinMode+0x76>
+ 34e:	cb 01       	movw	r24, r22
+ 350:	90 81       	ld	r25, Z
+ 352:	98 2b       	or	r25, r24
+ 354:	90 83       	st	Z, r25
+ 356:	f9 01       	movw	r30, r18
+ 358:	e8 57       	subi	r30, 0x78	; 120
+ 35a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 35c:	01 90       	ld	r0, Z+
+ 35e:	f0 81       	ld	r31, Z
+ 360:	e0 2d       	mov	r30, r0
+ 362:	80 95       	com	r24
+ 364:	90 81       	ld	r25, Z
+ 366:	89 23       	and	r24, r25
+ 368:	80 83       	st	Z, r24
+ 36a:	08 95       	ret
+ 36c:	e2 2f       	mov	r30, r18
+ 36e:	f0 e0       	ldi	r31, 0x00	; 0
+ 370:	ee 0f       	add	r30, r30
+ 372:	ff 1f       	adc	r31, r31
+ 374:	e0 58       	subi	r30, 0x80	; 128
+ 376:	ff 4f       	sbci	r31, 0xFF	; 255
+ 378:	01 90       	ld	r0, Z+
+ 37a:	f0 81       	ld	r31, Z
+ 37c:	e0 2d       	mov	r30, r0
+ 37e:	21 e0       	ldi	r18, 0x01	; 1
+ 380:	30 e0       	ldi	r19, 0x00	; 0
+ 382:	a9 01       	movw	r20, r18
+ 384:	02 c0       	rjmp	.+4      	; 0x38a <Dio_SetPinMode+0xba>
+ 386:	44 0f       	add	r20, r20
+ 388:	55 1f       	adc	r21, r21
+ 38a:	8a 95       	dec	r24
+ 38c:	e2 f7       	brpl	.-8      	; 0x386 <Dio_SetPinMode+0xb6>
+ 38e:	ca 01       	movw	r24, r20
+ 390:	80 95       	com	r24
+ 392:	90 81       	ld	r25, Z
+ 394:	89 23       	and	r24, r25
+ 396:	80 83       	st	Z, r24
+ 398:	08 95       	ret
+ 39a:	30 e0       	ldi	r19, 0x00	; 0
+ 39c:	22 0f       	add	r18, r18
+ 39e:	33 1f       	adc	r19, r19
+ 3a0:	f9 01       	movw	r30, r18
+ 3a2:	e0 58       	subi	r30, 0x80	; 128
+ 3a4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3a6:	01 90       	ld	r0, Z+
+ 3a8:	f0 81       	ld	r31, Z
+ 3aa:	e0 2d       	mov	r30, r0
+ 3ac:	41 e0       	ldi	r20, 0x01	; 1
+ 3ae:	50 e0       	ldi	r21, 0x00	; 0
+ 3b0:	ba 01       	movw	r22, r20
+ 3b2:	02 c0       	rjmp	.+4      	; 0x3b8 <Dio_SetPinMode+0xe8>
+ 3b4:	66 0f       	add	r22, r22
+ 3b6:	77 1f       	adc	r23, r23
+ 3b8:	8a 95       	dec	r24
+ 3ba:	e2 f7       	brpl	.-8      	; 0x3b4 <Dio_SetPinMode+0xe4>
+ 3bc:	cb 01       	movw	r24, r22
+ 3be:	80 95       	com	r24
+ 3c0:	90 81       	ld	r25, Z
+ 3c2:	98 23       	and	r25, r24
+ 3c4:	90 83       	st	Z, r25
+ 3c6:	f9 01       	movw	r30, r18
+ 3c8:	e8 57       	subi	r30, 0x78	; 120
+ 3ca:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3cc:	01 90       	ld	r0, Z+
+ 3ce:	f0 81       	ld	r31, Z
+ 3d0:	e0 2d       	mov	r30, r0
+ 3d2:	90 81       	ld	r25, Z
+ 3d4:	89 23       	and	r24, r25
+ 3d6:	80 83       	st	Z, r24
+ 3d8:	08 95       	ret
 
-000002ba <DIO_Init>:
- 2ba:	0f 93       	push	r16
- 2bc:	1f 93       	push	r17
- 2be:	cf 93       	push	r28
- 2c0:	00 e6       	ldi	r16, 0x60	; 96
- 2c2:	10 e0       	ldi	r17, 0x00	; 0
- 2c4:	c0 e0       	ldi	r28, 0x00	; 0
- 2c6:	f8 01       	movw	r30, r16
- 2c8:	61 91       	ld	r22, Z+
- 2ca:	8f 01       	movw	r16, r30
- 2cc:	8c 2f       	mov	r24, r28
- 2ce:	0e 94 d8 00 	call	0x1b0	; 0x1b0 <Dio_SetPinMode>
- 2d2:	cf 5f       	subi	r28, 0xFF	; 255
- 2d4:	c0 32       	cpi	r28, 0x20	; 32
- 2d6:	b9 f7       	brne	.-18     	; 0x2c6 <DIO_Init+0xc>
- 2d8:	cf 91       	pop	r28
- 2da:	1f 91       	pop	r17
- 2dc:	0f 91       	pop	r16
- 2de:	08 95       	ret
+000003da <DIO_Init>:
+ 3da:	0f 93       	push	r16
+ 3dc:	1f 93       	push	r17
+ 3de:	cf 93       	push	r28
+ 3e0:	00 e6       	ldi	r16, 0x60	; 96
+ 3e2:	10 e0       	ldi	r17, 0x00	; 0
+ 3e4:	c0 e0       	ldi	r28, 0x00	; 0
+ 3e6:	f8 01       	movw	r30, r16
+ 3e8:	61 91       	ld	r22, Z+
+ 3ea:	8f 01       	movw	r16, r30
+ 3ec:	8c 2f       	mov	r24, r28
+ 3ee:	0e 94 68 01 	call	0x2d0	; 0x2d0 <Dio_SetPinMode>
+ 3f2:	cf 5f       	subi	r28, 0xFF	; 255
+ 3f4:	c0 32       	cpi	r28, 0x20	; 32
+ 3f6:	b9 f7       	brne	.-18     	; 0x3e6 <DIO_Init+0xc>
+ 3f8:	cf 91       	pop	r28
+ 3fa:	1f 91       	pop	r17
+ 3fc:	0f 91       	pop	r16
+ 3fe:	08 95       	ret
 
-000002e0 <DIO_WritePinVal>:
+00000400 <DIO_WritePinVal>:
 }
 
 void DIO_WritePinVal(Pin_Type Pin_ID ,u8 VALUE )
 {
 	
 	Pin_Type Port_Index = Pin_ID / 8;
- 2e0:	e8 2f       	mov	r30, r24
- 2e2:	e6 95       	lsr	r30
- 2e4:	e6 95       	lsr	r30
- 2e6:	e6 95       	lsr	r30
+ 400:	e8 2f       	mov	r30, r24
+ 402:	e6 95       	lsr	r30
+ 404:	e6 95       	lsr	r30
+ 406:	e6 95       	lsr	r30
 	Pin_Type Pin_Index  = Pin_ID % 8;
- 2e8:	87 70       	andi	r24, 0x07	; 7
+ 408:	87 70       	andi	r24, 0x07	; 7
 	if (VALUE==HIGH)
- 2ea:	61 30       	cpi	r22, 0x01	; 1
- 2ec:	a9 f4       	brne	.+42     	; 0x318 <DIO_WritePinVal+0x38>
+ 40a:	61 30       	cpi	r22, 0x01	; 1
+ 40c:	a9 f4       	brne	.+42     	; 0x438 <DIO_WritePinVal+0x38>
 	{
 		SetBit(*DIO_RegPORT[Port_Index],Pin_Index);
- 2ee:	f0 e0       	ldi	r31, 0x00	; 0
- 2f0:	ee 0f       	add	r30, r30
- 2f2:	ff 1f       	adc	r31, r31
- 2f4:	e8 57       	subi	r30, 0x78	; 120
- 2f6:	ff 4f       	sbci	r31, 0xFF	; 255
- 2f8:	01 90       	ld	r0, Z+
- 2fa:	f0 81       	ld	r31, Z
- 2fc:	e0 2d       	mov	r30, r0
- 2fe:	21 e0       	ldi	r18, 0x01	; 1
- 300:	30 e0       	ldi	r19, 0x00	; 0
- 302:	a9 01       	movw	r20, r18
- 304:	02 c0       	rjmp	.+4      	; 0x30a <DIO_WritePinVal+0x2a>
- 306:	44 0f       	add	r20, r20
- 308:	55 1f       	adc	r21, r21
- 30a:	8a 95       	dec	r24
- 30c:	e2 f7       	brpl	.-8      	; 0x306 <DIO_WritePinVal+0x26>
- 30e:	ca 01       	movw	r24, r20
- 310:	90 81       	ld	r25, Z
- 312:	89 2b       	or	r24, r25
- 314:	80 83       	st	Z, r24
- 316:	08 95       	ret
+ 40e:	f0 e0       	ldi	r31, 0x00	; 0
+ 410:	ee 0f       	add	r30, r30
+ 412:	ff 1f       	adc	r31, r31
+ 414:	e8 57       	subi	r30, 0x78	; 120
+ 416:	ff 4f       	sbci	r31, 0xFF	; 255
+ 418:	01 90       	ld	r0, Z+
+ 41a:	f0 81       	ld	r31, Z
+ 41c:	e0 2d       	mov	r30, r0
+ 41e:	21 e0       	ldi	r18, 0x01	; 1
+ 420:	30 e0       	ldi	r19, 0x00	; 0
+ 422:	a9 01       	movw	r20, r18
+ 424:	02 c0       	rjmp	.+4      	; 0x42a <DIO_WritePinVal+0x2a>
+ 426:	44 0f       	add	r20, r20
+ 428:	55 1f       	adc	r21, r21
+ 42a:	8a 95       	dec	r24
+ 42c:	e2 f7       	brpl	.-8      	; 0x426 <DIO_WritePinVal+0x26>
+ 42e:	ca 01       	movw	r24, r20
+ 430:	90 81       	ld	r25, Z
+ 432:	89 2b       	or	r24, r25
+ 434:	80 83       	st	Z, r24
+ 436:	08 95       	ret
 	}
 	else if (VALUE==LOW)
- 318:	61 11       	cpse	r22, r1
- 31a:	15 c0       	rjmp	.+42     	; 0x346 <DIO_WritePinVal+0x66>
+ 438:	61 11       	cpse	r22, r1
+ 43a:	15 c0       	rjmp	.+42     	; 0x466 <DIO_WritePinVal+0x66>
 	{
 		ClrBit(*DIO_RegPORT[Port_Index],Pin_Index);
- 31c:	f0 e0       	ldi	r31, 0x00	; 0
- 31e:	ee 0f       	add	r30, r30
- 320:	ff 1f       	adc	r31, r31
- 322:	e8 57       	subi	r30, 0x78	; 120
- 324:	ff 4f       	sbci	r31, 0xFF	; 255
- 326:	01 90       	ld	r0, Z+
- 328:	f0 81       	ld	r31, Z
- 32a:	e0 2d       	mov	r30, r0
- 32c:	21 e0       	ldi	r18, 0x01	; 1
- 32e:	30 e0       	ldi	r19, 0x00	; 0
- 330:	a9 01       	movw	r20, r18
- 332:	02 c0       	rjmp	.+4      	; 0x338 <DIO_WritePinVal+0x58>
- 334:	44 0f       	add	r20, r20
- 336:	55 1f       	adc	r21, r21
- 338:	8a 95       	dec	r24
- 33a:	e2 f7       	brpl	.-8      	; 0x334 <DIO_WritePinVal+0x54>
- 33c:	ca 01       	movw	r24, r20
- 33e:	80 95       	com	r24
- 340:	90 81       	ld	r25, Z
- 342:	89 23       	and	r24, r25
- 344:	80 83       	st	Z, r24
- 346:	08 95       	ret
+ 43c:	f0 e0       	ldi	r31, 0x00	; 0
+ 43e:	ee 0f       	add	r30, r30
+ 440:	ff 1f       	adc	r31, r31
+ 442:	e8 57       	subi	r30, 0x78	; 120
+ 444:	ff 4f       	sbci	r31, 0xFF	; 255
+ 446:	01 90       	ld	r0, Z+
+ 448:	f0 81       	ld	r31, Z
+ 44a:	e0 2d       	mov	r30, r0
+ 44c:	21 e0       	ldi	r18, 0x01	; 1
+ 44e:	30 e0       	ldi	r19, 0x00	; 0
+ 450:	a9 01       	movw	r20, r18
+ 452:	02 c0       	rjmp	.+4      	; 0x458 <DIO_WritePinVal+0x58>
+ 454:	44 0f       	add	r20, r20
+ 456:	55 1f       	adc	r21, r21
+ 458:	8a 95       	dec	r24
+ 45a:	e2 f7       	brpl	.-8      	; 0x454 <DIO_WritePinVal+0x54>
+ 45c:	ca 01       	movw	r24, r20
+ 45e:	80 95       	com	r24
+ 460:	90 81       	ld	r25, Z
+ 462:	89 23       	and	r24, r25
+ 464:	80 83       	st	Z, r24
+ 466:	08 95       	ret
 
-00000348 <main>:
-#include "G_Interups_Interface.h"
+00000468 <main>:
 
+u8 KeyBad_Retrive;
 
 int main(void)
 {
 	DIO_Init();
- 348:	0e 94 5d 01 	call	0x2ba	; 0x2ba <DIO_Init>
+ 468:	0e 94 ed 01 	call	0x3da	; 0x3da <DIO_Init>
 	LCD_init();
- 34c:	0e 94 a8 00 	call	0x150	; 0x150 <LCD_init>
+ 46c:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <LCD_init>
+	KEYPAD_uint8Init();
+ 470:	0e 94 49 00 	call	0x92	; 0x92 <KEYPAD_uint8Init>
 // 	
 // 	GINTERUPTS_voidEnable();
 // 	EXInterupts_voidEnable(EX_INT1,EX_LOW_LEVEL);
 	LCD_SendData('A');
- 350:	81 e4       	ldi	r24, 0x41	; 65
- 352:	0e 94 5c 00 	call	0xb8	; 0xb8 <LCD_SendData>
-	LCD_SendData('B');
- 356:	82 e4       	ldi	r24, 0x42	; 66
- 358:	0e 94 5c 00 	call	0xb8	; 0xb8 <LCD_SendData>
- 35c:	ff cf       	rjmp	.-2      	; 0x35c <main+0x14>
+ 474:	81 e4       	ldi	r24, 0x41	; 65
+ 476:	0e 94 85 00 	call	0x10a	; 0x10a <LCD_SendData>
+	LCD_SendData(' ');
+ 47a:	80 e2       	ldi	r24, 0x20	; 32
+ 47c:	0e 94 85 00 	call	0x10a	; 0x10a <LCD_SendData>
 
-0000035e <_exit>:
- 35e:	f8 94       	cli
 
-00000360 <__stop_program>:
- 360:	ff cf       	rjmp	.-2      	; 0x360 <__stop_program>
+	//LCD_voidWriteString("hello world");
+	
+	LCD_voidWriteNumber(234);
+ 480:	6a ee       	ldi	r22, 0xEA	; 234
+ 482:	70 e0       	ldi	r23, 0x00	; 0
+ 484:	80 e0       	ldi	r24, 0x00	; 0
+ 486:	90 e0       	ldi	r25, 0x00	; 0
+ 488:	0e 94 01 01 	call	0x202	; 0x202 <LCD_voidWriteNumber>
+	LCD_voidGoToSpecificPosition(2,3);
+ 48c:	63 e0       	ldi	r22, 0x03	; 3
+ 48e:	82 e0       	ldi	r24, 0x02	; 2
+ 490:	0e 94 64 01 	call	0x2c8	; 0x2c8 <LCD_voidGoToSpecificPosition>
+ 494:	ff cf       	rjmp	.-2      	; 0x494 <main+0x2c>
+
+00000496 <__udivmodsi4>:
+ 496:	a1 e2       	ldi	r26, 0x21	; 33
+ 498:	1a 2e       	mov	r1, r26
+ 49a:	aa 1b       	sub	r26, r26
+ 49c:	bb 1b       	sub	r27, r27
+ 49e:	fd 01       	movw	r30, r26
+ 4a0:	0d c0       	rjmp	.+26     	; 0x4bc <__udivmodsi4_ep>
+
+000004a2 <__udivmodsi4_loop>:
+ 4a2:	aa 1f       	adc	r26, r26
+ 4a4:	bb 1f       	adc	r27, r27
+ 4a6:	ee 1f       	adc	r30, r30
+ 4a8:	ff 1f       	adc	r31, r31
+ 4aa:	a2 17       	cp	r26, r18
+ 4ac:	b3 07       	cpc	r27, r19
+ 4ae:	e4 07       	cpc	r30, r20
+ 4b0:	f5 07       	cpc	r31, r21
+ 4b2:	20 f0       	brcs	.+8      	; 0x4bc <__udivmodsi4_ep>
+ 4b4:	a2 1b       	sub	r26, r18
+ 4b6:	b3 0b       	sbc	r27, r19
+ 4b8:	e4 0b       	sbc	r30, r20
+ 4ba:	f5 0b       	sbc	r31, r21
+
+000004bc <__udivmodsi4_ep>:
+ 4bc:	66 1f       	adc	r22, r22
+ 4be:	77 1f       	adc	r23, r23
+ 4c0:	88 1f       	adc	r24, r24
+ 4c2:	99 1f       	adc	r25, r25
+ 4c4:	1a 94       	dec	r1
+ 4c6:	69 f7       	brne	.-38     	; 0x4a2 <__udivmodsi4_loop>
+ 4c8:	60 95       	com	r22
+ 4ca:	70 95       	com	r23
+ 4cc:	80 95       	com	r24
+ 4ce:	90 95       	com	r25
+ 4d0:	9b 01       	movw	r18, r22
+ 4d2:	ac 01       	movw	r20, r24
+ 4d4:	bd 01       	movw	r22, r26
+ 4d6:	cf 01       	movw	r24, r30
+ 4d8:	08 95       	ret
+
+000004da <_exit>:
+ 4da:	f8 94       	cli
+
+000004dc <__stop_program>:
+ 4dc:	ff cf       	rjmp	.-2      	; 0x4dc <__stop_program>
