@@ -125,14 +125,18 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>../HAL/MCAL/DIO</Value>
       <Value>..</Value>
-      <Value>../HAL/MCAL</Value>
       <Value>../HAL</Value>
       <Value>../HAL/KeyBad</Value>
       <Value>../HAL/LCD</Value>
-      <Value>../HAL/MCAL/ExternalInterupts</Value>
-      <Value>../HAL/MCAL/GlobalInterups</Value>
+      <Value>../programs</Value>
+      <Value>../programs/Calculator</Value>
+      <Value>../HAL/7Segments</Value>
+      <Value>../MCAL</Value>
+      <Value>../MCAL/ADC</Value>
+      <Value>../MCAL/DIO</Value>
+      <Value>../MCAL/ExternalInterupts</Value>
+      <Value>../MCAL/GlobalInterups</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -156,6 +160,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="bitMath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\7Segments\SSegment_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\7Segments\SSegment_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\7Segments\SSegment_Program.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\KeyBad\Configure_KeyBad.h">
@@ -221,6 +234,54 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\ADC\ADC_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_Program.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\Dio_Int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\DIO_prv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\Program.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ExternalInterupts\Ex_Interups_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ExternalInterupts\Ex_Interups_prgram.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ExternalInterupts\Ex_Interups_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GlobalInterups\G_Interups_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GlobalInterups\G_Interups_prgram.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\GlobalInterups\G_Interups_Private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="programs\Calculator\Calculator_LCD_KEYS_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="programs\Calculator\Calculator_LCD_KEYS_Program.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="types.h">
       <SubType>compile</SubType>
     </Compile>
@@ -234,6 +295,14 @@
     <Folder Include="HAL\LED" />
     <Folder Include="HAL\MCAL\ExternalInterupts" />
     <Folder Include="HAL\MCAL\GlobalInterups" />
+    <Folder Include="HAL\7Segments" />
+    <Folder Include="MCAL\" />
+    <Folder Include="MCAL\ADC\" />
+    <Folder Include="MCAL\DIO\" />
+    <Folder Include="MCAL\ExternalInterupts\" />
+    <Folder Include="MCAL\GlobalInterups\" />
+    <Folder Include="programs" />
+    <Folder Include="programs\Calculator" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

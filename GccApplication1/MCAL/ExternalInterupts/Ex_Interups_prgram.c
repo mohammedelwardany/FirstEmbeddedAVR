@@ -103,6 +103,7 @@ void EXInterupts_voidEnable(EXTI_SRC_t copy_interuptSource, EXT_TRIGGER_t copy_T
 					break;
 				}
 			}
+			SetBit(GICR,INT2); //EN INT1
 			break;
 		}
 		

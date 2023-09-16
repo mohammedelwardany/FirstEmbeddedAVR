@@ -16,4 +16,6 @@
 #define ToggleBit(R,N) ((R)^=(1<<N))
 #define GetBit(R,N) ((R>>N)&1)
 
+#define ISLOW(R,N) (!((R>>N)&1))
+
 #endif /* BITMATH_H_ */

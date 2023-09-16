@@ -27,7 +27,7 @@
 
 
 
-#define Dio_PinA0_init    OutPut_Low
+#define Dio_PinA0_init    InPut_PullUp
 #define Dio_PinA1_init	  OutPut_Low
 #define Dio_PinA2_init	  OutPut_Low
 #define Dio_PinA3_init    OutPut_Low

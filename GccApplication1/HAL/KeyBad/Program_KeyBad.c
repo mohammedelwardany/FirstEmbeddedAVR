@@ -29,8 +29,15 @@
 
  u8 KEYPAD_uint8GetPressedKey(void)
  {
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 u8 Local_uint8PressedSwitch = 'N';
-	 u8 Local_uint8aKeyPadMap[KEYPAD_ROWS_NO][KEYPAD_COLUMNS_NO] = KYP_ARR;
 	 u8 Local_uint8CurrentCol;
 	 u8 Local_uint8CurrentRow;
 	 u8 Local_uint8CurrentColStatus;
@@ -41,6 +48,7 @@
 	 {
 		 /*activate the current column*/
 		 DIO_WritePinVal(ROW_ARR[Local_uint8CurrentRow],LOW);
+				 _delay_ms(35);
 
 		 for (Local_uint8CurrentCol = 0 ;
 		 Local_uint8CurrentCol < KEYPAD_COLUMNS_NO ;
@@ -51,7 +59,7 @@
 			 /*If Switch is pressed */
 			 if (Local_uint8CurrentColStatus == LOW) //34an e7na pull up
 			 {
-				 _delay_ms(25);
+				 _delay_ms(35);
 				 /*Wait For Debouncing*/
 				 /*If Switch is pressed */
 
@@ -59,10 +67,12 @@
 
 				 if (Local_uint8CurrentColStatus == LOW) //34an e7na pull up
 				 {
-					 Local_uint8PressedSwitch = Local_uint8aKeyPadMap[Local_uint8CurrentRow][Local_uint8CurrentCol];
+					 Local_uint8PressedSwitch = KYP_ARR[Local_uint8CurrentRow][Local_uint8CurrentCol];
 				 }
 				 /* the switch which is in this row and that column is pressed*/
+				 
 			 }
+
 		 }
 		 /*Deactivate the column*/
 		 DIO_WritePinVal(ROW_ARR[Local_uint8CurrentRow],HIGH);

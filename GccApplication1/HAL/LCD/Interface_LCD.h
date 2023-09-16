@@ -1,9 +1,9 @@
 /*
- * Interface_LCD.h
- *
- * Created: 9/10/2023 1:48:58 PM
- *  Author: m2010
- */ 
+* Interface_LCD.h
+*
+* Created: 9/10/2023 1:48:58 PM
+*  Author: m2010
+*/
 
 
 #ifndef INTERFACE_LCD_H_

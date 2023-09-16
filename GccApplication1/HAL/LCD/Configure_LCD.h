@@ -1,9 +1,9 @@
 /*
- * Configure_LCD.h
- *
- * Created: 9/10/2023 1:47:32 PM
- *  Author: m2010
- */ 
+* Configure_LCD.h
+*
+* Created: 9/10/2023 1:47:32 PM
+*  Author: m2010
+*/
 
 
 #ifndef CONFIGURE_LCD_H_
